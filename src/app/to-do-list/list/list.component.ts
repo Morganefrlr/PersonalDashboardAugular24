@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {ToDo } from '../fakeToDo';
 import { TodolistService } from '../todolist.service';
 
@@ -7,8 +7,9 @@ import { TodolistService } from '../todolist.service';
   templateUrl: './list.component.html'
 })
 export class ListComponent implements OnInit{
-
+  @Input()todo : ToDo
   toDoList:ToDo[] 
+
 
 
   constructor(private todoService : TodolistService){}
@@ -27,5 +28,12 @@ export class ListComponent implements OnInit{
     )
   }
   
+  onSubmit(){
+    this.todoService.addToDo(this.todo)
+        .subscribe(() => 
+          this.todoService.getToDoList()
+          .subscribe(toDoList => this.toDoList = toDoList)
+        ) 
+  }
 
 }

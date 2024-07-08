@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { FAKETODOS, ToDo } from './fakeToDo';
 import { catchError, Observable, of, tap } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,17 @@ export class TodolistService {
        tap((res) => this.log(res)),
        catchError((error) => this.handleError(error, []) ))
     
+  }
+
+  addToDo(toDo : ToDo):Observable<ToDo>{
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type' : 'application/json'})
+    }
+
+    return this.http.post<ToDo>('api/todolist', toDo, httpOptions).pipe(
+      tap((res) => this.log(res)),
+      catchError((error) => this.handleError(error, null))
+    )
   }
 
   
