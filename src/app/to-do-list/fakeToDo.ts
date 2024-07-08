@@ -1,10 +1,10 @@
-export type toDo = {
+export type ToDo = {
     id: number;
     title: string;
 }
 
 
-export const FAKETODOS: toDo[] = [
+export const FAKETODOS: ToDo[] = [
     {
         id: 1,
         title: "Meeting Room 201",
