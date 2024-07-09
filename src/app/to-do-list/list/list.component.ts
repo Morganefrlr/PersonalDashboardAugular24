@@ -44,8 +44,14 @@ export class ListComponent implements OnInit{
             .subscribe(toDoList => this.toDoList = toDoList)
           ) 
     }else {
-      console.log(this.toDo)
+      this.todoService.updateToDo(this.toDo)
+      .subscribe(() => 
+        this.todoService.getToDoList()
+        .subscribe(toDoList => this.toDoList = toDoList)
+      ) 
+      
     }
+    this.toDo = new ToDo()
     
   } 
 

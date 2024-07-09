@@ -31,6 +31,16 @@ export class TodolistService {
     )
   }
 
+  updateToDo(updatedTodo : ToDo) : Observable<null>{
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type' : 'application/json'})
+    }
+
+    return this.http.put('api/todolist', updatedTodo, httpOptions).pipe(
+      tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, null))
+    )
+  }
   
   deleteTodoById(toDoId : number): Observable<null>{
     return this.http.delete(`api/todolist/${toDoId}`).pipe(
