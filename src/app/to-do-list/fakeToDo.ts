@@ -1,6 +1,13 @@
-export type ToDo = {
+export class ToDo {
     id: number;
     title: string;
+    constructor(
+        id:number= 0,
+        title: string = 'Entrer votre tache...'
+    ) {
+        this.id = id;
+        this.title = title;
+    }
 }
 
 

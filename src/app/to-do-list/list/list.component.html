@@ -7,12 +7,10 @@
                 required 
                 pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                 name="title"
-            />
+                [(ngModel)]="toDo.title" 
+               />
 
-            <div [hidden]="title.valid || title.pristine"
-                  class="card-panel red accent-1">
-                  Le titre est requis (1-25).
-            </div>
+            <button type="submit">Envoi</button>
         </div>
     </form>
 
@@ -21,7 +19,7 @@
         <div>
             <p>{{toDo.title}}</p>
             <img (click)="deleteToDo(toDo)" width="20" height="20" src="https://img.icons8.com/3d-fluency/94/cancel.png" alt="cancel"/>
-            <img width="20" height="20" src="https://img.icons8.com/3d-fluency/94/edit.png" alt="edit"/>
+            <img (click)="update(toDo)" width="20" height="20" src="https://img.icons8.com/3d-fluency/94/edit.png" alt="edit"/>
         </div>        
     </div>
 </div>

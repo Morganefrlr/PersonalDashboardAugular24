@@ -7,9 +7,10 @@ import { TodolistService } from '../todolist.service';
   templateUrl: './list.component.html'
 })
 export class ListComponent implements OnInit{
-  @Input()todo : ToDo
+ 
   toDoList:ToDo[] 
-
+  title : string
+  toDo : ToDo
 
 
   constructor(private todoService : TodolistService){}
@@ -18,6 +19,8 @@ export class ListComponent implements OnInit{
   ngOnInit(){
    this.todoService.getToDoList()
    .subscribe(toDoList => this.toDoList = toDoList)
+
+   this.toDo = new ToDo()
   }
 
   deleteToDo(toDo : ToDo){
@@ -29,11 +32,26 @@ export class ListComponent implements OnInit{
   }
   
   onSubmit(){
-    this.todoService.addToDo(this.todo)
-        .subscribe(() => 
-          this.todoService.getToDoList()
-          .subscribe(toDoList => this.toDoList = toDoList)
-        ) 
+    if(this.toDo.id === 0){
+      const createId= new Date()
+      const newTodo : ToDo = {
+        title : this.toDo.title,
+        id :+createId
+      }
+      this.todoService.addToDo(newTodo)
+          .subscribe(() => 
+            this.todoService.getToDoList()
+            .subscribe(toDoList => this.toDoList = toDoList)
+          ) 
+    }else {
+      console.log(this.toDo)
+    }
+    
+  } 
+
+  update(toDo: ToDo){
+    console.log(toDo)
+    this.toDo = toDo
   }
 
 }

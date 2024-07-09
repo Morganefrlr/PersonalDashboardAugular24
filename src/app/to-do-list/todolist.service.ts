@@ -20,12 +20,12 @@ export class TodolistService {
     
   }
 
-  addToDo(toDo : ToDo):Observable<ToDo>{
+  addToDo(newToDo: ToDo):Observable<ToDo>{
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type' : 'application/json'})
     }
-
-    return this.http.post<ToDo>('api/todolist', toDo, httpOptions).pipe(
+    
+    return this.http.post<ToDo>('api/todolist', newToDo, httpOptions).pipe(
       tap((res) => this.log(res)),
       catchError((error) => this.handleError(error, null))
     )
