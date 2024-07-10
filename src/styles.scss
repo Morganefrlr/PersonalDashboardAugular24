@@ -1,2 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$main: #37474F;
+$two: #FFC727;
+$three: #EBEBEB;
+$four: #263238;
+$five: #DBDBDB;
+$six: #D6AA22;
+
+
+
 @import 'app/to-do-list/todolist'

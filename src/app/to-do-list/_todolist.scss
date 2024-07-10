@@ -1,0 +1,40 @@
+.toDoMainContainer{
+    display: flex;
+
+    &_right{
+        flex: 1;
+        background-color: aquamarine;
+    }
+    &_left{
+        flex: 1;
+        background-color: bisque;
+    }
+}
+
+
+.toDoForm{
+    display: flex;
+    input{
+        width: 80%;
+        border: none;
+        height: 30px;
+
+        &:focus{
+            outline: none;
+        }
+    } 
+    button{
+        border: none;
+        width: 20%;
+        background-color: brown;
+        cursor: pointer;
+    }
+}
+
+
+
+.toDosContainer{
+    &_task{
+
+    }
+}
