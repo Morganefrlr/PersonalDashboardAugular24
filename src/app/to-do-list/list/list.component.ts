@@ -21,6 +21,7 @@ export class ListComponent implements OnInit{
    .subscribe(toDoList => this.toDoList = toDoList.reverse() )
 
    this.toDo = new ToDo()
+
   }
 
   deleteToDo(toDo : ToDo){
