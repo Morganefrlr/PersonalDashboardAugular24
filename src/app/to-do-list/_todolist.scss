@@ -7,6 +7,8 @@
 
     &_right{
         flex: 1;
+        position: relative;
+        display: flex;
     }
     &_left{
         flex: 1;
@@ -22,6 +24,11 @@
 
 .toDoForm{
     display: flex;
+    height:fit-content;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    
     input{
         width: 80%;
         border: none;
@@ -39,18 +46,25 @@
     }
 }
 
-
+.test{
+    display: flex;
+    width: 100%;
+    max-height: 85vh;
+    gap: 30px;
+    flex-direction: column;
+    margin: auto;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+}
 
 .toDosContainer{
 
     display: flex;
-    flex-direction: column;
-    height: 100px;
-    &_task{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-
+    height: 70px;
+    position: relative;
 
         .taskBack{
             border-top-right-radius: 10px;
@@ -92,5 +106,5 @@
                 display: flex;
             }
         }
-    }
+    
 }
