@@ -129,6 +129,11 @@
 
                 div{
                     display: flex;
+                    gap: 10px;
+                }
+
+                &_icon{
+                    cursor: pointer;
                 }
             }
         
