@@ -9,11 +9,11 @@
                 [(ngModel)]="toDo.title" 
                />
 
-            <button type="submit">Envoi</button>
+            <button type="submit">+</button>
         </form>
-        <div class="test">
+        <div class="toDosContainer">
 
-            <div *ngFor="let toDo of toDoList; let i = index" class="toDosContainer">           
+            <div *ngFor="let toDo of toDoList; let i = index" class="toDosContainer_task">           
                 <div class="taskBack">{{i + 1}}</div>
                 <div class="taskFront">
                     <p>{{toDo.title}}</p>

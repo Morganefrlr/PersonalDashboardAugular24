@@ -8,7 +8,7 @@ import { TodolistService } from '../todolist.service';
 })
 export class ListComponent implements OnInit{
  
-  toDoList:ToDo[] 
+  toDoList:ToDo[]
   title : string
   toDo : ToDo
 
@@ -18,7 +18,7 @@ export class ListComponent implements OnInit{
 
   ngOnInit(){
    this.todoService.getToDoList()
-   .subscribe(toDoList => this.toDoList = toDoList)
+   .subscribe(toDoList => this.toDoList = toDoList.reverse() )
 
    this.toDo = new ToDo()
   }
@@ -27,7 +27,7 @@ export class ListComponent implements OnInit{
     this.todoService.deleteTodoById(toDo.id)
     .subscribe(() => 
       this.todoService.getToDoList()
-      .subscribe(toDoList => this.toDoList = toDoList)
+      .subscribe(toDoList => this.toDoList = toDoList.reverse())
     )
   }
   
@@ -41,13 +41,13 @@ export class ListComponent implements OnInit{
       this.todoService.addToDo(newTodo)
           .subscribe(() => 
             this.todoService.getToDoList()
-            .subscribe(toDoList => this.toDoList = toDoList)
+            .subscribe(toDoList => this.toDoList = toDoList.reverse() )
           ) 
     }else {
       this.todoService.updateToDo(this.toDo)
       .subscribe(() => 
         this.todoService.getToDoList()
-        .subscribe(toDoList => this.toDoList = toDoList)
+        .subscribe(toDoList => this.toDoList = toDoList.reverse() )
       ) 
       
     }
