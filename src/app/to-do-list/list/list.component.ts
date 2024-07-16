@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ToDo } from '../fakeToDo';
 import { TodolistService } from '../todolist.service';
+
 
 @Component({
   selector: 'app-list',
@@ -8,9 +9,10 @@ import { TodolistService } from '../todolist.service';
 })
 export class ListComponent implements OnInit{
  
-  toDoList:ToDo[]
+  toDoList:ToDo[] 
   title : string
   toDo : ToDo
+  toDoEmpty: boolean = false 
 
 
   constructor(private todoService : TodolistService){}
@@ -18,13 +20,24 @@ export class ListComponent implements OnInit{
 
   ngOnInit(){
    this.todoService.getToDoList()
-   .subscribe(toDoList => this.toDoList = toDoList.reverse() )
-
+   .subscribe(toDoList => this.toDoList = toDoList.reverse())
    this.toDo = new ToDo()
 
   }
 
   deleteToDo(toDo : ToDo){
+    if(this.toDoList.length <= 1){
+      this.todoService.deleteTodoById(toDo.id)
+      .subscribe(() => 
+        this.todoService.getToDoList()
+        .subscribe(toDoList => this.toDoList = toDoList.reverse())
+      )
+      setTimeout(() => {
+        this.toDoEmpty = true
+      }, 1500);
+      
+      
+    }
     this.todoService.deleteTodoById(toDo.id)
     .subscribe(() => 
       this.todoService.getToDoList()
@@ -33,6 +46,7 @@ export class ListComponent implements OnInit{
   }
   
   onSubmit(){
+    this.toDoEmpty = false
     if(this.toDo.id === 0){
       const createId= new Date()
       const newTodo : ToDo = {
