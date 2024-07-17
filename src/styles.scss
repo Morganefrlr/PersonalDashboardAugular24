@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 $fontColor: #263238;
+
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined');
 *{
     box-sizing: border-box;
     padding: 0;
@@ -17,4 +19,5 @@ $toDoYellowDark: #D6AA22;
 
 
 @import 'app/to-do-list/todolist';
-@import "./app/appStyle"
+@import "./app/appStyle";
+@import "./app/tabs/tabs"

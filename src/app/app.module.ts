@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    TabsComponent,
 
   ],
   imports: [
