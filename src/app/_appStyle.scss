@@ -1,18 +1,17 @@
 .mainContainer{
-    background-color: antiquewhite;
+    background-image: url('../assets/img5-min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
-
     display: flex;
     flex-direction: column;
 
 
-
+    
     &_top{
         text-align: center;
-        background-color: green;
         text-shadow: 0px 1px 4px rgba(#000, 0.5);
-
         padding: 100px 0;
         h1{
             font-size: 120px;
@@ -27,18 +26,20 @@
 
 
 
-    &_bottom{
-        background-color: orange;
-    }
-
-
-
-
-
     &_content{
-        background-color: aqua;
         flex-grow: 1;
     }
+
+
+
+
+
+
+    &_bottom{
+       // background-color: orange;
+    }
+
+    
 }
 
 
