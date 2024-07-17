@@ -10,6 +10,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
 import { TabsComponent } from './tabs/tabs.component';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { TodosComponent } from './todos/todos.component';
+import { NotesComponent } from './notes/notes.component';
 
 
 @NgModule({
@@ -17,6 +20,9 @@ import { TabsComponent } from './tabs/tabs.component';
     AppComponent,
     PageNotFoundComponent,
     TabsComponent,
+    BookmarksComponent,
+    TodosComponent,
+    NotesComponent,
 
   ],
   imports: [
