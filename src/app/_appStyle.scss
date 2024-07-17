@@ -1,0 +1,44 @@
+.mainContainer{
+    background-color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+
+
+    &_top{
+        text-align: center;
+        background-color: green;
+        text-shadow: 0px 1px 4px rgba(#000, 0.5);
+
+        padding: 100px 0;
+        h1{
+            font-size: 120px;
+            color: #f5f5f5;
+        }
+
+        h2{
+            font-size: 28px;
+            color: #fff;
+        }
+    }
+
+
+
+    &_bottom{
+        background-color: orange;
+    }
+
+
+
+
+
+    &_content{
+        background-color: aqua;
+        flex-grow: 1;
+    }
+}
+
+

@@ -9,13 +9,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
-import { HomePageComponent } from './home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    HomePageComponent,
 
   ],
   imports: [
