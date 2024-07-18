@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {InMemoryDbService} from 'angular-in-memory-web-api'
-import { FAKETODOS } from './to-do-list/fakeToDo';
+
 
 
 @Injectable({
@@ -9,7 +9,7 @@ import { FAKETODOS } from './to-do-list/fakeToDo';
 export class InMemoryDataService implements InMemoryDbService {
 
   createDb(){
-    const todolist = FAKETODOS
+    const todolist = [{}]
     return {todolist}
   }
 }
