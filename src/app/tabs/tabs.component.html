@@ -1,30 +1,9 @@
 <div class="tabsMain">
-
-    <a routerLink="bookmarks" routerLinkActive="selected" class="tab bookmarksTab">
+    <a *ngFor="let tab of tabList"  routerLink={{tab.link}} routerLinkActive="selected" class='tab {{tab.classColor}}'>
         <div class="tab-tile">
             <i class="material-icons-outlined">
-                bookmarks
+                {{tab.icon}}
             </i>
         </div>
     </a>
-
-    <a routerLink="todos" routerLinkActive="selected" class="tab checkTab">
-        <div class="tab-tile">
-            <i class="material-icons-outlined">
-                check
-            </i>
-        </div>
-    </a>
-
-
-    <a routerLink="notes" routerLinkActive="selected" class="tab notesTab">
-        <div class="tab-tile">
-            <i class="material-icons-outlined">
-                notes
-            </i>
-        </div>
-    </a>
-
-
-
 </div>
