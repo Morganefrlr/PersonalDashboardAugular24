@@ -1,0 +1,33 @@
+.todosMainContainer {    
+    height: 100%;
+}
+
+.todoItem{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    background-color: rgba(#000 ,0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 25px;
+    padding: 6px 8px; 
+    margin-bottom: 10px;
+    .boxCheck{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1.5px solid  #ffffff45;
+        cursor: pointer;
+        i{
+            opacity: 0;
+        }
+    }
+
+    span{
+        color: #ffffffc7;
+    }
+    
+
+    
+
+}
