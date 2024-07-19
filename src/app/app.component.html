@@ -1,8 +1,8 @@
 <div class="mainContainer">
 
     <div  class="mainContainer_top">
-            <h1>8:00</h1>
-            <h2>1 Janvier 2025</h2>
+            <h1>{{ dateTime | async | date:'HH:mm'  }}</h1>
+            <h2>{{dateTime | async | date:'d MMMM y': '':'fr-FR'}}</h2>
     </div>
 
 

@@ -10,7 +10,12 @@ import { TabsComponent } from './tabs/tabs.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { TodosComponent } from './todos/todos.component';
 import { NotesComponent } from './notes/notes.component';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr'
 
+
+
+registerLocaleData(localeFr)
 
 @NgModule({
   declarations: [
