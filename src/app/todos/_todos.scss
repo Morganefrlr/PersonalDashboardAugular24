@@ -13,13 +13,17 @@
     padding: 6px 8px; 
     margin-bottom: 10px;
     .boxCheck{
-        width: 20px;
-        height: 20px;
+        min-width: 20px;
+        min-height: 20px;
         border-radius: 50%;
         border: 1.5px solid  #ffffff45;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
         i{
             opacity: 0;
+            font-size: 14px;
         }
     }
 
@@ -27,7 +31,38 @@
         color: #ffffffc7;
     }
     
+    &:hover{
+        .boxCheck{
+            background-color: #ffffff45;
+            border: none;
+        }
 
+        span{
+            color: #ffffffea;
+        }
+    }
     
 
+}
+
+.todoItem .boxCheck {
+    transition: all 500ms ease;
+}
+
+.todoSelected{
+    .boxCheck{
+        background-color: green;
+        border: none;
+
+        i{
+            opacity: 1;
+        }
+    }
+
+    &:hover{
+        .boxCheck{
+            background-color: green;
+    
+        }
+    }
 }
