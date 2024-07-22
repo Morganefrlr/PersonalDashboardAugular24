@@ -12,6 +12,7 @@ import { NotesComponent } from './notes/notes.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr'
 import { TodosMainModule } from './todos-main/todos-main.module';
+import { SharedModuleModule } from './shared-module/shared-module.module';
 
 
 
@@ -32,6 +33,7 @@ registerLocaleData(localeFr)
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation:false}),
     TodosMainModule,
+    SharedModuleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
