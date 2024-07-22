@@ -33,13 +33,15 @@
     }
     
     &:hover{
+        background-color: rgba(#000 ,0.55);
+        box-shadow: 0px 2px 2px rgba(#000000 ,0.3);
+        transform: scale(1.002);
         .boxCheck{
             background-color: rgba(#fff, 0.7);
         }
 
         span{
             color: rgba(#fff, 0.9);
-            
         }
     }
     
@@ -65,5 +67,37 @@
             background-color: green;
     
         }
+    }
+}
+
+
+
+.btnAdd{
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: rgba(#000 ,0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    margin: 40px auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 200ms ease;
+    box-shadow: 0px 2px 2px rgba(#000000 ,0.3);
+    a{
+        text-decoration: none;
+        color: rgba(#fff, 0.8);
+        display: flex;
+        
+    }
+
+    &:hover{
+        background-color: rgba(#000 ,0.7);
+        transform: scale(1.045);
+    }
+
+    &:active{
+        background-color: rgba(#000 ,0.8);
     }
 }
