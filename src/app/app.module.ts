@@ -11,7 +11,7 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { NotesComponent } from './notes/notes.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr'
-import { TodosMainModule } from './todos-main/todos-main.module';
+import {  TodosModule } from './todos/todos.module';
 import { SharedModuleModule } from './shared-module/shared-module.module';
 
 
@@ -32,8 +32,8 @@ registerLocaleData(localeFr)
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation:false}),
-    TodosMainModule,
     SharedModuleModule,
+    TodosModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
