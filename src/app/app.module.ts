@@ -8,10 +8,10 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
 import { TabsComponent } from './tabs/tabs.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
-import { TodosComponent } from './todos/todos.component';
 import { NotesComponent } from './notes/notes.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr'
+import { TodosMainModule } from './todos-main/todos-main.module';
 
 
 
@@ -22,7 +22,6 @@ registerLocaleData(localeFr)
     AppComponent,
     TabsComponent,
     BookmarksComponent,
-    TodosComponent,
     NotesComponent,
 
   ],
@@ -32,6 +31,7 @@ registerLocaleData(localeFr)
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation:false}),
+    TodosMainModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
