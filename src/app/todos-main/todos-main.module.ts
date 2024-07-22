@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodosComponent } from './todos/todos.component';
 import { RouterModule, Routes } from '@angular/router';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 
 const todosRoutes: Routes = [
@@ -10,7 +11,8 @@ const todosRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    TodosComponent
+    TodosComponent,
+    TodoItemComponent
   ],
   imports: [
     CommonModule,

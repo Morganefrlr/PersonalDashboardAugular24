@@ -12,11 +12,12 @@
     border-radius: 25px;
     padding: 6px 8px; 
     margin-bottom: 10px;
+    cursor: pointer;
     .boxCheck{
         min-width: 20px;
         min-height: 20px;
         border-radius: 50%;
-        border: 1.5px solid  #ffffff45;
+        border: 2px solid  rgba(#fff, 0.3);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -28,17 +29,17 @@
     }
 
     span{
-        color: #ffffffc7;
+        color: rgba(#fff, 0.8);
     }
     
     &:hover{
         .boxCheck{
-            background-color: #ffffff45;
-            border: none;
+            background-color: rgba(#fff, 0.7);
         }
 
         span{
-            color: #ffffffea;
+            color: rgba(#fff, 0.9);
+            
         }
     }
     
@@ -51,7 +52,7 @@
 
 .todoSelected{
     .boxCheck{
-        background-color: green;
+        background-color: rgb(58, 139, 58);
         border: none;
 
         i{
