@@ -1,10 +1,10 @@
-<div class="todoItem">
-    <div class="boxCheck">
+<div class="todoItem" [class.todoCompleted]="todo.completed">
+    <div class="boxCheck ">
         <i class="material-icons-outlined">
             check
         </i>
     </div>
-    <span>Ceci est une todo test</span>
+    <span>{{todo.text}}</span>
 
 
     <div class="todoBoxIcons">
