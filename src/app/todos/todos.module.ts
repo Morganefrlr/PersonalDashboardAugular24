@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
+import { TodosService } from './todos.service';
 
 
 const todosRoutes: Routes = [
@@ -22,6 +23,9 @@ const todosRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(todosRoutes),
     SharedModuleModule,
+  ],
+  providers:[
+    TodosService
   ]
 })
 export class TodosModule { }
