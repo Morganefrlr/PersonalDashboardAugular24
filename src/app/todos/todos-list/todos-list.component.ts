@@ -22,7 +22,10 @@ export class TodosListComponent implements OnInit{
    this.todosService.updateTodo(todo.id, {completed: !todo.completed})
   }
 
-
+  handleDelete(id: number){
+    this.todosService.deleteTodo(id)
+    this.todos = this.todosService.getTodos() 
+  }
 
 
 

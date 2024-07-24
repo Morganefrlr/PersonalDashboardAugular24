@@ -7,13 +7,13 @@
     <span>{{todo.text}}</span>
 
 
-    <div class="todoBoxIcons">
-        <div class="todoBoxIcons_item">
+    <div class="todoBoxIcons" (click)="$event.stopPropagation();">
+        <div class="todoBoxIcons_item" >
             <i class="material-icons">
                 edit
             </i>
         </div>
-        <div class="todoBoxIcons_item">
+        <div class="todoBoxIcons_item" (click)="handleDelete()">
             <i class="material-icons">
                 delete
             </i>

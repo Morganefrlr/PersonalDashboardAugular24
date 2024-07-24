@@ -33,4 +33,10 @@ export class TodosService {
     Object.assign(todo, updatedTodoFields)
 
   }
+
+  deleteTodo(id:number){
+    const todosUpdated =  this.todos.filter(el => el.id !== id)
+    this.todos = todosUpdated
+    console.log(this.todos)
+  }
 }
