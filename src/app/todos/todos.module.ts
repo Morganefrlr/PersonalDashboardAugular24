@@ -7,7 +7,6 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { TodosService } from './todos.service';
 
-
 const todosRoutes: Routes = [
   {path:"todos", component: TodosListComponent},
   {path:"todos/add", component: AddTodoComponent},
@@ -23,6 +22,7 @@ const todosRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(todosRoutes),
     SharedModuleModule,
+    
   ],
   providers:[
     TodosService
