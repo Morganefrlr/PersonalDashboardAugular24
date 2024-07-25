@@ -6,6 +6,7 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { TodosService } from './todos.service';
+import { FormsModule } from '@angular/forms';
 
 const todosRoutes: Routes = [
   {path:"todos", component: TodosListComponent},
@@ -22,6 +23,7 @@ const todosRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(todosRoutes),
     SharedModuleModule,
+    FormsModule,
     
   ],
   providers:[

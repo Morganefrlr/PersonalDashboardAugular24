@@ -18,6 +18,9 @@ import { animate, style, transition, trigger } from '@angular/animations';
     ])
   ]
 })
+
+
+
 export class TodosListComponent implements OnInit{
  todos : Todo[]
  
