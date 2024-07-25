@@ -1,13 +1,13 @@
 <div class="formAddMainContainer container">
     <h3>Ajouter une Tâche</h3>
-    <form #addForm="ngForm" class="addForm">
+    <form (ngSubmit)="onSubmit()" #addForm="ngForm" class="addForm">
         <div class="addForm_inputContainer">
             <input type="text" 
                 
                 placeholder="Entrer une nouvelle tâche....." 
                 required
-                pattern="^[a-zA-Z0-9àâéèç]$"
-                ngModel
+                pattern="^[a-zA-Z0-9àâéèç'!?,.() ]{1,300}$"
+                [(ngModel)]="value"
                 name="inputText"
                 #inputText="ngModel"
             >
@@ -19,7 +19,7 @@
 
         <div class="addForm_buttonContainer">
             <button routerLink="../" class="cancelButtonForm">Annuler</button>
-            <button class="addButtonForm">Ajouter</button>
+            <button class="addButtonForm" type="submit" [disabled]="!addForm.form.valid">Ajouter</button>
         </div>
     </form>
 </div>
