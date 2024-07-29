@@ -5,22 +5,33 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-todo',
-  templateUrl: './add-todo.component.html',
-  styles: ``
+  template:`
+    <div class="formAddMainContainer container">
+      <h3>Ajouter une Tâche</h3>
+      <app-form
+      [todo]="todo"
+      (addTodo)="addTodo()"
+      ></app-form>
+    </div>
+    
+  `
 })
 export class AddTodoComponent implements OnInit{
    
-  value: string
-constructor(
-  private todosService : TodosService,
-  private router : Router
-){}
+  todo : Todo = new Todo('')
+
+
+  constructor(
+    private todosService : TodosService,
+    private router : Router
+  ){}
   ngOnInit(): void {
     
   }
 
-  onSubmit(){
-    this.todosService.addTodo(new Todo(this.value))
+  addTodo(){
+    this.todosService.addTodo(this.todo)
     this.router.navigate(['/todos'])
+
   }
 }

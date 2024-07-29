@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output, output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from '../todoModel';
-import { TodosService } from '../todos.service';
+
 
 @Component({
   selector: 'app-todo-item',

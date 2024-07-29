@@ -7,10 +7,12 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { TodosService } from './todos.service';
 import { FormsModule } from '@angular/forms';
+import { EditTodoComponent } from './edit-todo/edit-todo.component';
 
 const todosRoutes: Routes = [
   {path:"todos", component: TodosListComponent},
   {path:"todos/add", component: AddTodoComponent},
+ {path:'todos/edit/:id', component: EditTodoComponent} 
 ]
 
 @NgModule({
@@ -18,6 +20,7 @@ const todosRoutes: Routes = [
     TodosListComponent,
     TodoItemComponent,
     AddTodoComponent,
+    EditTodoComponent,
   ],
   imports: [
     CommonModule,

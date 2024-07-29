@@ -41,6 +41,8 @@ export class TodosListComponent implements OnInit{
     this.todos = this.todosService.getTodos() 
   }
 
-
+  handleEdit(todo: Todo){
+    
+  }
 
 }
