@@ -1,23 +1,29 @@
-<form (ngSubmit)="onSubmit()" #addForm="ngForm" class="formStyle">
-    <div class="formStyle_inputContainer">
-        <input type="text" 
+<div  class="formMainContainer container">
+    <h3>{{title}}</h3>
+    
+    
+    <form (ngSubmit)="onSubmit()" #addForm="ngForm" class="formStyle">
+        <div class="formStyle_inputContainer">
+            <input type="text" 
             placeholder="Entrer une nouvelle tâche....." 
             required
             pattern="^[a-zA-Z0-9àâéèç'!?,.() ]{1,300}$"
             [(ngModel)]="todo.text"
             name="inputText"
             #inputText="ngModel"
-        >
-
-        <div [hidden]="inputText.valid || inputText.pristine">
-            Il y a une erreur de saisie
+            >
+            
+            <div [hidden]="inputText.valid || inputText.pristine">
+                Il y a une erreur de saisie
+            </div>
         </div>
-    </div>
-
-    <div class="formStyle_buttonContainer">
-        <button routerLink="../" class="cancelButtonForm">Annuler</button>
-        <button class="addButtonForm" type="submit" [disabled]="!addForm.form.valid">
-            {{value}}
-        </button>
-    </div>
-</form>
+        
+        <div class="formStyle_buttonContainer">
+            <button routerLink="../" class="cancelButtonForm">Annuler</button>
+            <button class="addButtonForm" type="submit" [disabled]="!addForm.form.valid">
+                {{value}}
+            </button>
+        </div>
+    </form>
+    
+</div>

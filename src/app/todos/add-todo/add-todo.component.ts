@@ -6,19 +6,20 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-todo',
   template:`
-    <div class="formMainContainer container">
-      <h3>Ajouter une Tâche</h3>
-      <app-form
+    <app-form
       [todo]="todo"
       (handleBtn)="addTodo()"
-      ></app-form>
-    </div>
+      [title]="title"
+    >
+    </app-form>
+
     
   `
 })
 export class AddTodoComponent implements OnInit{
    
   todo : Todo = new Todo('')
+  title: string = 'Ajouter une Tâche'
 
 
   constructor(

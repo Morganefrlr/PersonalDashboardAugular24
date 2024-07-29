@@ -6,20 +6,20 @@ import { Todo } from '../todoModel';
 @Component({
   selector: 'app-edit-todo',
   template: `
-    <div class="formMainContainer container">
-      <h3>Editer une Tâche</h3>
+
       <app-form
       [todo]="todo"
       (handleBtn)="editTodo()"
+      [title]="title"
       ></app-form>
-    </div>
+
   `,
   styles: ``
 })
 export class EditTodoComponent implements OnInit{
 
   todo : Todo | undefined
-
+  title: string = 'Editer une Tâche'
 
 
   constructor(

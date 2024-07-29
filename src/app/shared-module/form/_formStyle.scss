@@ -22,12 +22,12 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    width: 100%;
     &_inputContainer{
         display: flex;
         flex-direction: column;
         gap: 10px;
         width: 90%;
-        background-color: #A9C9FF;
         input{
             height: 30px;
             padding: 4px;

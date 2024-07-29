@@ -12,6 +12,7 @@ export class FormComponent implements OnInit{
 
 
   @Input()todo : Todo | any
+  @Input()title: string
   @Output() handleBtn: EventEmitter<void> = new EventEmitter()
 
   ngOnInit(){
