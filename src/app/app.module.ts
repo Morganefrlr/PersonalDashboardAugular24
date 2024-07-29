@@ -9,7 +9,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
 import { TabsComponent } from './tabs/tabs.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
-import { NotesComponent } from './notes/notes.component';
+import { NotesComponent } from './notes/notes-list/notes-list.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr'
 import {  TodosModule } from './todos/todos.module';
