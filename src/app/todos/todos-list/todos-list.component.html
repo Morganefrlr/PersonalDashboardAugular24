@@ -6,7 +6,8 @@
             *ngFor="let todo of todos"  
             [todo]="todo"
             (click)="toggleCompleted(todo)"
-            (deleteClick)="handleDelete(todo.id)"
+            (handleDeleteTodo)="handleDeleteTodo(todo.id)"
+            (handleEditTodo)="handleEditTodo(todo.id)"
             >
         </app-todo-item>
 

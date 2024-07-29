@@ -8,12 +8,12 @@
 
 
     <div class="todoBoxIcons" (click)="$event.stopPropagation();">
-        <div class="todoBoxIcons_item" >
+        <div class="todoBoxIcons_item" (click)="handleEditBtn()">
             <i class="material-icons" >
                 edit
             </i>
         </div>
-        <div class="todoBoxIcons_item" (click)="handleDelete()">
+        <div class="todoBoxIcons_item" (click)="handleDeleteBtn()">
             <i class="material-icons">
                 delete
             </i>

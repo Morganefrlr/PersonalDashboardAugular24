@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from '../todoModel';
 import { TodosService } from '../todos.service';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todos-list',
@@ -24,7 +25,9 @@ import { animate, style, transition, trigger } from '@angular/animations';
 export class TodosListComponent implements OnInit{
  todos : Todo[]
  
- constructor(private todosService : TodosService){}
+ constructor(private todosService : TodosService,
+  private router : Router
+ ){}
 
 
   ngOnInit(){
@@ -36,13 +39,13 @@ export class TodosListComponent implements OnInit{
    this.todosService.updateTodo(todo.id, {completed: !todo.completed})
   }
 
-  handleDelete(id: number){
+  handleDeleteTodo(id: number){
     this.todosService.deleteTodo(id)
     this.todos = this.todosService.getTodos() 
   }
 
-  handleEdit(todo: Todo){
-    
+  handleEditTodo(id : number){
+    this.router.navigate(["todos/edit", id])
   }
 
 }

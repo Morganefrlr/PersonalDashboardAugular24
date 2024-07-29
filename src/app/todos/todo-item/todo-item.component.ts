@@ -12,7 +12,8 @@ export class TodoItemComponent implements OnInit{
 
   @Input() todo: Todo
 
-  @Output() deleteClick: EventEmitter<void> = new EventEmitter()
+  @Output() handleDeleteTodo: EventEmitter<void> = new EventEmitter()
+  @Output() handleEditTodo: EventEmitter<void> = new EventEmitter()
 
 
   constructor(){}
@@ -21,8 +22,11 @@ export class TodoItemComponent implements OnInit{
     
   }
 
-  handleDelete(){
-    this.deleteClick.emit()
+  handleDeleteBtn(){
+    this.handleDeleteTodo.emit()
+  }
+  handleEditBtn(){
+    this.handleEditTodo.emit()
   }
 
 }

@@ -20,7 +20,7 @@ export class TodosService {
     return this.todos
   }
 
-  getTodo(id : number){
+  getTodoById(id : number){
     return this.todos.find(el => el.id === id)
   }
 
@@ -29,7 +29,7 @@ export class TodosService {
   }
 
   updateTodo(id: number, updatedTodoFields: Partial<Todo>) {
-    const todo : Todo | any = this.getTodo(id)
+    const todo : Todo | any = this.getTodoById(id)
     Object.assign(todo, updatedTodoFields)
 
   }
