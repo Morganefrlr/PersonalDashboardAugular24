@@ -1,7 +1,6 @@
-<form (ngSubmit)="onSubmit()" #addForm="ngForm" class="addForm">
-    <div class="addForm_inputContainer">
+<form (ngSubmit)="onSubmit()" #addForm="ngForm" class="formStyle">
+    <div class="formStyle_inputContainer">
         <input type="text" 
-            
             placeholder="Entrer une nouvelle tâche....." 
             required
             pattern="^[a-zA-Z0-9àâéèç'!?,.() ]{1,300}$"
@@ -15,7 +14,7 @@
         </div>
     </div>
 
-    <div class="addForm_buttonContainer">
+    <div class="formStyle_buttonContainer">
         <button routerLink="../" class="cancelButtonForm">Annuler</button>
         <button class="addButtonForm" type="submit" [disabled]="!addForm.form.valid">Ajouter</button>
     </div>

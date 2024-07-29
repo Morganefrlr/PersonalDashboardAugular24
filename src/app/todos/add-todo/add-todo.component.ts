@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-todo',
   template:`
-    <div class="formAddMainContainer container">
+    <div class="formMainContainer container">
       <h3>Ajouter une Tâche</h3>
       <app-form
       [todo]="todo"
@@ -25,7 +25,8 @@ export class AddTodoComponent implements OnInit{
     private todosService : TodosService,
     private router : Router
   ){}
-  ngOnInit(): void {
+
+  ngOnInit() {
     
   }
 

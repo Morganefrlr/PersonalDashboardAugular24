@@ -9,7 +9,7 @@ import { Todo } from '../../todos/todoModel';
 export class FormComponent implements OnInit{
  
   @Input()todo : Todo | any
-  value: string  | any
+  value: string  
 
   @Output() addTodo: EventEmitter<void> = new EventEmitter()
 
