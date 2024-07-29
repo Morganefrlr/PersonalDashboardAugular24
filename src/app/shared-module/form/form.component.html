@@ -4,7 +4,7 @@
             placeholder="Entrer une nouvelle tâche....." 
             required
             pattern="^[a-zA-Z0-9àâéèç'!?,.() ]{1,300}$"
-            [(ngModel)]="value"
+            [(ngModel)]="todo.text"
             name="inputText"
             #inputText="ngModel"
         >

@@ -10,15 +10,17 @@ export class FormComponent implements OnInit{
  
   @Input()todo : Todo | any
   value: string  
-
-  @Output() addTodo: EventEmitter<void> = new EventEmitter()
+  isAddForm: boolean = true
+  @Output() handleBtn: EventEmitter<void> = new EventEmitter()
 
   ngOnInit(){
+    if(this.todo.text !== ''){
+      this.isAddForm = false
+    } 
     
   }
 
   onSubmit(){
-    this.todo.text = this.value
-    this.addTodo.emit(this.todo)
+    this.handleBtn.emit(this.todo)
   }
 }

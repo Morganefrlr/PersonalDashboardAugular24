@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TodosService } from '../todos.service';
 import { Todo } from '../todoModel';
 
@@ -7,8 +7,11 @@ import { Todo } from '../todoModel';
   selector: 'app-edit-todo',
   template: `
     <div class="formMainContainer container">
-      <h3>Ajouter une Tâche</h3>
-      
+      <h3>Editer une Tâche</h3>
+      <app-form
+      [todo]="todo"
+      (handleBtn)="editTodo()"
+      ></app-form>
     </div>
   `,
   styles: ``
@@ -16,16 +19,28 @@ import { Todo } from '../todoModel';
 export class EditTodoComponent implements OnInit{
 
   todo : Todo | undefined
+
+
+
   constructor(
     private route : ActivatedRoute,
+    private router : Router,
     private todoService : TodosService
   ){}
+
+
 
   ngOnInit(): void {
     const params: string | null = this.route.snapshot.paramMap.get("id") 
     if(params){
       this.todo = this.todoService.getTodoById(+params)
-      console.log(this.todo)
     }
   }
+
+
+ editTodo(){
+  if(this.todo){this.todoService.updateTodo(this.todo.id, {text: this.todo.text})}
+  this.router.navigate(['/todos'])
+ }
+
 }

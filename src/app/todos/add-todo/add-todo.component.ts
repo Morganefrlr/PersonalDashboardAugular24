@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
       <h3>Ajouter une Tâche</h3>
       <app-form
       [todo]="todo"
-      (addTodo)="addTodo()"
+      (handleBtn)="addTodo()"
       ></app-form>
     </div>
     
