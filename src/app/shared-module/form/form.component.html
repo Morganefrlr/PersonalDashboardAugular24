@@ -16,6 +16,8 @@
 
     <div class="formStyle_buttonContainer">
         <button routerLink="../" class="cancelButtonForm">Annuler</button>
-        <button class="addButtonForm" type="submit" [disabled]="!addForm.form.valid">Ajouter</button>
+        <button class="addButtonForm" type="submit" [disabled]="!addForm.form.valid">
+            {{value}}
+        </button>
     </div>
 </form>

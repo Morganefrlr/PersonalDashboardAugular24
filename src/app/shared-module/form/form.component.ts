@@ -8,14 +8,15 @@ import { Todo } from '../../todos/todoModel';
 })
 export class FormComponent implements OnInit{
  
+  value: string = 'Ajouter'
+
+
   @Input()todo : Todo | any
-  value: string  
-  isAddForm: boolean = true
   @Output() handleBtn: EventEmitter<void> = new EventEmitter()
 
   ngOnInit(){
     if(this.todo.text !== ''){
-      this.isAddForm = false
+      this.value = 'Editer'
     } 
     
   }
