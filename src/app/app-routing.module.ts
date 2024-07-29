@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
-import { NotesComponent } from './notes/notes-list/notes-list.component';
+
 
 
 
 const routes: Routes = [
  {path:"bookmarks", component: BookmarksComponent},
- {path:"notes", component: NotesComponent},
+
 ];
 
 @NgModule({

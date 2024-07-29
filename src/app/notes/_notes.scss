@@ -1,0 +1,36 @@
+.notesMainContainer{
+    height: 100%;
+}
+
+.noteItem{
+    background-color: rgba(#000 ,0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 2px;
+    padding: 10px 12px; 
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: rgba(#fff, 0.8);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    max-height: 100px;
+
+
+    h4{
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    &:hover{
+        background-color: rgba(#000 ,0.55);
+        box-shadow: 0px 2px 2px rgba(#000000 ,0.3);
+        transform: scale(1.002);
+    }
+}

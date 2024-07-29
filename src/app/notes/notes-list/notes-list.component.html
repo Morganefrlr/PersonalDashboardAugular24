@@ -1,1 +1,13 @@
-<p>notes works!</p>
+<div class="notesMainContainer">
+    <div class="container">
+
+        <app-note-item
+        *ngFor="let note of notes"
+        [note]="note"
+        ></app-note-item>
+
+       <app-button-add></app-button-add>
+
+    </div>
+</div>
+

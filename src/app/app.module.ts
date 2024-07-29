@@ -9,11 +9,11 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
 import { TabsComponent } from './tabs/tabs.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
-import { NotesComponent } from './notes/notes-list/notes-list.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr'
 import {  TodosModule } from './todos/todos.module';
 import { SharedModuleModule } from './shared-module/shared-module.module';
+import { NotesModule } from './notes/notes.module';
 
 
 
@@ -24,7 +24,6 @@ registerLocaleData(localeFr)
     AppComponent,
     TabsComponent,
     BookmarksComponent,
-    NotesComponent,
 
   ],
   imports: [
@@ -35,6 +34,7 @@ registerLocaleData(localeFr)
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation:false}),
     SharedModuleModule,
     TodosModule,
+    NotesModule,
     BrowserAnimationsModule,
   ],
   providers: [],

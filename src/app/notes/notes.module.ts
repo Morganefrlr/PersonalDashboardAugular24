@@ -5,6 +5,7 @@ import { NotesListComponent } from './notes-list/notes-list.component';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { FormsModule } from '@angular/forms';
 import { NotesService } from './notes.service';
+import { NoteItemComponent } from './note-item/note-item.component';
 
 const notesRoutes: Routes = [
  {path:"notes", component: NotesListComponent}
@@ -12,7 +13,8 @@ const notesRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    NotesListComponent
+    NotesListComponent,
+    NoteItemComponent
   ],
   imports: [
     CommonModule,
