@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Note } from '../noteModel';
+import { NotesService } from '../notes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-note',
@@ -16,12 +18,17 @@ export class AddNoteComponent implements OnInit{
   
   note: Note = new Note('','')
 
-  ngOnInit(): void {
+  constructor(
+    private notesService : NotesService,
+    private router : Router
+  ){}
+
+  ngOnInit() {
     
   }
 
   addNote(){
-    console.log("ok")
-
+    this.notesService.addNote(this.note)
+    this.router.navigate(['/notes'])
   }
 }

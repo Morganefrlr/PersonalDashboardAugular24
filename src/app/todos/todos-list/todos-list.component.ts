@@ -32,7 +32,6 @@ export class TodosListComponent implements OnInit{
 
   ngOnInit(){
    this.todos = this.todosService.getTodos() 
-   console.log(this.todos)
  }
  
   toggleCompleted(todo:Todo){

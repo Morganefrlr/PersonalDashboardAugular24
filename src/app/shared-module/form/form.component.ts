@@ -33,9 +33,9 @@ export class FormComponent implements OnInit{
 
   onSubmit(){
     if(this.todo){this.handleBtn.emit(this.todo)}
-    if(this.note){
-      console.log(this.note)
-    }
+    if(this.note){this.handleBtn.emit(this.note)}
+      
+    
     
   }
 }
