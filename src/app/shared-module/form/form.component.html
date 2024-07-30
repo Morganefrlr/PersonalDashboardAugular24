@@ -1,22 +1,11 @@
 <div  class="formMainContainer container">
-    <h3>{{title}}</h3>
+    <h3>{{value}} {{title}}</h3>
     
     
     <form (ngSubmit)="onSubmit()" #addForm="ngForm" class="formStyle">
-        <div class="formStyle_inputContainer">
-            <input type="text" 
-            placeholder="Entrer une nouvelle tâche....." 
-            required
-            pattern="^[a-zA-Z0-9àâéèç'!?,.() ]{1,300}$"
-            [(ngModel)]="todo.text"
-            name="inputText"
-            #inputText="ngModel"
-            >
-            
-            <div [hidden]="inputText.valid || inputText.pristine">
-                Il y a une erreur de saisie
-            </div>
-        </div>
+        
+        <app-input-todo *ngIf="todo" [todo]="todo"></app-input-todo>
+        <app-input-note *ngIf="note" [note]="note"></app-input-note>
         
         <div class="formStyle_buttonContainer">
             <button routerLink="../" class="cancelButtonForm">Annuler</button>

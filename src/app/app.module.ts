@@ -17,6 +17,7 @@ import { NotesModule } from './notes/notes.module';
 
 
 
+
 registerLocaleData(localeFr)
 
 @NgModule({
@@ -24,6 +25,7 @@ registerLocaleData(localeFr)
     AppComponent,
     TabsComponent,
     BookmarksComponent,
+
 
   ],
   imports: [

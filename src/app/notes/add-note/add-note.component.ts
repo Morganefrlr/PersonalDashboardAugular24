@@ -1,17 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { Note } from '../noteModel';
 
 @Component({
   selector: 'app-add-note',
   template: `
    <app-form
-   [title]="title"
+   
+   [note]='note'
+   (handleBtn)="addNote()"
    ></app-form>
   `
 })
 export class AddNoteComponent implements OnInit{
-  title : string = "Ajouter une Note"
+  
+  
+  note: Note = new Note('','')
 
   ngOnInit(): void {
     
+  }
+
+  addNote(){
+    console.log("ok")
+
   }
 }

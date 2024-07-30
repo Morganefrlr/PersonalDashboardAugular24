@@ -4,13 +4,17 @@ import { ButtonAddComponent } from './button-add/button-add.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { InputTodoComponent } from './form/input-todo/input-todo.component';
+import { InputNoteComponent } from './form/input-note/input-note.component';
 
 
 
 @NgModule({
   declarations: [
     ButtonAddComponent,
-    FormComponent
+    FormComponent,
+    InputTodoComponent,
+    InputNoteComponent,
   ],
   imports: [
     CommonModule,

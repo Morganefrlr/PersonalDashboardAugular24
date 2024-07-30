@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
     <app-form
       [todo]="todo"
       (handleBtn)="addTodo()"
-      [title]="title"
     >
     </app-form>
 
@@ -19,7 +18,7 @@ import { Router } from '@angular/router';
 export class AddTodoComponent implements OnInit{
    
   todo : Todo = new Todo('')
-  title: string = 'Ajouter une Tâche'
+  
 
 
   constructor(

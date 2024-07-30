@@ -9,18 +9,17 @@ import { Todo } from '../todoModel';
 
       <app-form
       [todo]="todo"
+      [edit]="edit"
       (handleBtn)="editTodo()"
-      [title]="title"
+
       ></app-form>
 
-  `,
-  styles: ``
+  `
 })
 export class EditTodoComponent implements OnInit{
 
   todo : Todo | undefined
-  title: string = 'Editer une Tâche'
-
+  edit: boolean = true
 
   constructor(
     private route : ActivatedRoute,
