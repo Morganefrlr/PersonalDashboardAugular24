@@ -9,6 +9,10 @@ import { Todo } from '../todoModel';
 
 
 export class TodoItemComponent implements OnInit{
+  
+  class: string= 'todoButtons'
+ 
+
 
   @Input() todo: Todo
 

@@ -8,8 +8,17 @@ import { Note } from '../noteModel';
 })
 export class NoteItemComponent implements OnInit{
 
+  class:string = 'noteButtons'
   @Input() note: Note
-  ngOnInit(): void {
+
+
+
+  ngOnInit(){
     
   }
+
+  handleEditBtn(){
+    console.log('editbtn')
+  }
+  handleDeleteBtn(){console.log('deletebtn') }
 }

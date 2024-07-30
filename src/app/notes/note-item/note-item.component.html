@@ -1,5 +1,14 @@
 <div class="noteItem">
-    <h4>{{note.title}}</h4>
-    <span>{{note.desc}}</span>
+    <div class="noteItem_texts">
+
+        <h4>{{note.title}}</h4>
+        <span>{{note.desc}}</span>
+    </div>
+
+    <app-box-buttons-item
+    (handleEditBtn)="handleEditBtn()"
+    (handleDeleteBtn)="handleDeleteBtn()"
+    [class]="class">
+    </app-box-buttons-item>
     
 </div>

@@ -8,14 +8,24 @@
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
-
-
-
 .container{
     max-width: 60vw;
     margin: auto;
-    
 }
+
+
+
+
+@mixin visibilityButtonsItem {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 400ms;
+}
+
+
+
+
 
 
 
@@ -25,4 +35,5 @@
 @import "./app/todos/todos";
 @import "./app/notes/notes";
 @import "./app/bookmarks/bookmarks";
-@import "./app/shared-module/form/formStyle"
+@import "./app/shared-module/form/formStyle";
+@import "./app/shared-module/box-buttons-item/boxButtonsItemStyle"

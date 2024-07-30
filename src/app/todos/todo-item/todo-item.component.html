@@ -6,17 +6,11 @@
     </div>
     <span>{{todo.text}}</span>
 
+    <app-box-buttons-item
+    (handleEditBtn)="handleEditBtn()"
+    (handleDeleteBtn)="handleDeleteBtn()"
+    [class]="class"
+    >
+    </app-box-buttons-item>
 
-    <div class="todoBoxIcons" (click)="$event.stopPropagation();">
-        <div class="todoBoxIcons_item" (click)="handleEditBtn()">
-            <i class="material-icons" >
-                edit
-            </i>
-        </div>
-        <div class="todoBoxIcons_item" (click)="handleDeleteBtn()">
-            <i class="material-icons">
-                delete
-            </i>
-        </div>
-    </div>
 </div>

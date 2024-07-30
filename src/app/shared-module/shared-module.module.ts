@@ -6,6 +6,7 @@ import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { InputTodoComponent } from './form/input-todo/input-todo.component';
 import { InputNoteComponent } from './form/input-note/input-note.component';
+import { BoxButtonsItemComponent } from './box-buttons-item/box-buttons-item.component';
 
 
 
@@ -15,6 +16,7 @@ import { InputNoteComponent } from './form/input-note/input-note.component';
     FormComponent,
     InputTodoComponent,
     InputNoteComponent,
+    BoxButtonsItemComponent,
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,7 @@ import { InputNoteComponent } from './form/input-note/input-note.component';
   exports:[
     ButtonAddComponent,
     FormComponent,
+    BoxButtonsItemComponent,
   ]
 })
 export class SharedModuleModule { }

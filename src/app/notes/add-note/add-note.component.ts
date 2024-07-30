@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   selector: 'app-add-note',
   template: `
    <app-form
-   
    [note]='note'
    (handleBtn)="addNote()"
    ></app-form>
