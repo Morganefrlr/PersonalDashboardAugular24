@@ -9,10 +9,21 @@ import { NotesService } from '../notes.service';
 })
 export class NotesListComponent implements OnInit{
 
- notes: Note[] 
+  notes: Note[] 
 
- constructor( private notesService : NotesService){}
+  constructor( private notesService : NotesService){}
+
   ngOnInit(){
     this.notes = this.notesService.getNotes()
   }
+
+
+  handleDeleteNote(id: number){
+    this.notesService.deleteNote(id)
+    this.notes = this.notesService.getNotes()
+
+  }
+
+
+
 }

@@ -4,6 +4,7 @@
         <app-note-item
         *ngFor="let note of notes"
         [note]="note"
+        (handleDeleteNote)="handleDeleteNote(note.id)"
         ></app-note-item>
 
        <app-button-add></app-button-add>

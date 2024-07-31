@@ -6,10 +6,11 @@ import { Note } from './noteModel';
 })
 export class NotesService {
 
-notes: Note[]=[
-  new Note('coucou', "helloo "),
-  new Note('hello world ', 'fdzhbiopuvdz dvzhip vzdhipvdz viydzp uvrdzizpà yvreazdyhipfeéa yvbirzdp obvfizdypào efagéiypgvre yubfvzid pyfzdvbijokyh grziuopy vbfrzhiupvbdfz pohgfevadipbv zfrypiubrvzhpizdfg gyi!bvdfz ùgrzgujvdfmo sfvbdgijhlqs bgvhimfdbgouùjmgre ùovfsgh uoùbfveioùh fveôùa ')
-]
+  notes: Note[]=[
+    new Note('coucou', "helloo "),
+    new Note('hello world ', 'fdzhbiopuvdz dvzhip vzdhipvdz viydzp uvrdzizpà yvreazdyhipfeéa yvbirzdp obvfizdypào efagéiypgvre yubfvzid pyfzdvbijokyh grziuopy vbfrzhiupvbdfz pohgfevadipbv zfrypiubrvzhpizdfg gyi!bvdfz ùgrzgujvdfmo sfvbdgijhlqs bgvhimfdbgouùjmgre ùovfsgh uoùbfveioùh fveôùa ')
+  ]
+  
 
 
   constructor() { }
@@ -26,7 +27,11 @@ notes: Note[]=[
     this.notes.push(note)
   }
   
+  deleteNote(id:number){
+    const notesUpdated  = this.notes.filter(el => el.id !== id)
+    this.notes = notesUpdated
 
+  }
 
 
 

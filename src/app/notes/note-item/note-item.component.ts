@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Note } from '../noteModel';
+import { NotesService } from '../notes.service';
 
 @Component({
   selector: 'app-note-item',
@@ -10,8 +11,13 @@ export class NoteItemComponent implements OnInit{
 
   class:string = 'noteButtons'
   @Input() note: Note
+  
+  @Output() handleDeleteNote: EventEmitter<void> = new EventEmitter()
+ // @Output() handleEditTodo: EventEmitter<void> = new EventEmitter()
 
-
+  constructor(
+    private notesService :NotesService
+  ){}
 
   ngOnInit(){
     
@@ -20,5 +26,7 @@ export class NoteItemComponent implements OnInit{
   handleEditBtn(){
     console.log('editbtn')
   }
-  handleDeleteBtn(){console.log('deletebtn') }
+  handleDeleteBtn(){
+    this.handleDeleteNote.emit()
+  }
 }
