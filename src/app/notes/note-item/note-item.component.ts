@@ -13,18 +13,16 @@ export class NoteItemComponent implements OnInit{
   @Input() note: Note
   
   @Output() handleDeleteNote: EventEmitter<void> = new EventEmitter()
- // @Output() handleEditTodo: EventEmitter<void> = new EventEmitter()
+  @Output() handleEditNote: EventEmitter<void> = new EventEmitter()
 
-  constructor(
-    private notesService :NotesService
-  ){}
+  constructor(){}
 
   ngOnInit(){
     
   }
 
   handleEditBtn(){
-    console.log('editbtn')
+    this.handleEditNote.emit()
   }
   handleDeleteBtn(){
     this.handleDeleteNote.emit()

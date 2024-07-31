@@ -33,6 +33,12 @@ export class NotesService {
 
   }
 
+  updateNote(note: Note){
+    const noteUpdated : Note | any = this.getNoteById(note.id)
+    const noteIndex : number = this.notes.findIndex(el => el.id === note.id)
+    this.notes[noteIndex] = noteUpdated
+  }
+
 
 
 

@@ -7,19 +7,22 @@ import { FormsModule } from '@angular/forms';
 import { NotesService } from './notes.service';
 import { NoteItemComponent } from './note-item/note-item.component';
 import { AddNoteComponent } from './add-note/add-note.component';
+import { EditNoteComponent } from './edit-note/edit-note.component';
 
 const notesRoutes: Routes = [
  {path:"notes", component: NotesListComponent},
- {path:'notes/add',component:  AddNoteComponent }
+ {path:'notes/add',component:  AddNoteComponent },
+ {path:'notes/edit/:id',component:  EditNoteComponent },
 ]
 
 @NgModule({
   declarations: [
     NotesListComponent,
     NoteItemComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    EditNoteComponent
   ],
-  imports: [
+  imports: [  
     CommonModule,
     RouterModule.forChild(notesRoutes),
     SharedModuleModule,
