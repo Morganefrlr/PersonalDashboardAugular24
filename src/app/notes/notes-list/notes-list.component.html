@@ -2,6 +2,7 @@
     <div class="container">
 
         <app-note-item
+        @deleteAnimation
         *ngFor="let note of notes"
         [note]="note"
         (handleDeleteNote)="handleDeleteNote(note.id)"
