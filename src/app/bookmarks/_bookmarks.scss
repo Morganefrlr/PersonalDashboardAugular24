@@ -1,3 +1,19 @@
+.bookmarksMainContainer{
+    height: 100%;
+
+    .container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
 .bookmarkItem{
     display: flex;
     flex-direction: column;
@@ -11,7 +27,6 @@
     border-radius: 5px;
     color: rgba(#fff, 0.8);
     cursor: pointer;
-
 
     &:hover{
         background-color: rgba(#000 ,0.55);
