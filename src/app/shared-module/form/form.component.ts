@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from '../../todos/todoModel';
 import { Note } from '../../notes/noteModel';
+import { Bookmark } from '../../bookmarks/bookmarkModel';
 
 @Component({
   selector: 'app-form',
@@ -14,6 +15,7 @@ export class FormComponent implements OnInit{
 
   @Input()todo : Todo | any
   @Input()note: Note | any
+  @Input()bookmark:Bookmark  | any
   @Input()edit : boolean= false
 
   @Output() handleBtn: EventEmitter<void> = new EventEmitter()
@@ -27,6 +29,9 @@ export class FormComponent implements OnInit{
     }
     if(this.note){
       this.title = "une Note"
+    }
+    if(this.bookmark){
+      this.title = "un Bookmark"
     }
     
   }

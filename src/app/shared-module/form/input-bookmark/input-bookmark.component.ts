@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Bookmark } from '../../../bookmarks/bookmarkModel';
 
 @Component({
   selector: 'app-input-bookmark',
@@ -10,5 +11,6 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class InputBookmarkComponent {
+  @Input() bookmark :Bookmark 
 
 }

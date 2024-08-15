@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Bookmark } from '../bookmarkModel';
 
 @Component({
   selector: 'app-add-bookmark',
   template: `
     <app-form
-   
+   [bookmark]='bookmark'
    (handleBtn)="addBookmark()"
    ></app-form>
   `,
@@ -12,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddBookmarkComponent implements OnInit{
 
+  bookmark : Bookmark = new Bookmark('','')
 
   constructor(){}
   ngOnInit(){

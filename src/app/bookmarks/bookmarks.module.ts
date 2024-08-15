@@ -8,6 +8,7 @@ import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
 
 const bookmarksRoutes: Routes = [
   {path:"bookmarks", component: BookmarksListComponent},
+  {path:"bookmarks/add", component: AddBookmarkComponent},
   
 ]
 
