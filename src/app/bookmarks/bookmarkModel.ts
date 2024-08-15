@@ -6,10 +6,7 @@ export class Bookmark{
     constructor(title: string, url:string){
         this.id = Math.ceil(Math.random() * 10000) + Math.ceil(Math.random() * 10000)
         this.url = new URL(url)
-
-        if(!title) title = this.url.hostname
-        this.title= title
-
+        this.title = title
 
     }
 }

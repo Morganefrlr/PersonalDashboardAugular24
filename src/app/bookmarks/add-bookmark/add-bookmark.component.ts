@@ -13,7 +13,7 @@ import { Bookmark } from '../bookmarkModel';
 })
 export class AddBookmarkComponent implements OnInit{
 
-  bookmark : Bookmark = new Bookmark('','')
+  bookmark : Bookmark = new Bookmark('','http://example.com')
 
   constructor(){}
   ngOnInit(){
@@ -21,7 +21,7 @@ export class AddBookmarkComponent implements OnInit{
   }
 
   addBookmark(){
-    console.log('ok')
+    console.log(this.bookmark)
   }
 
 }
