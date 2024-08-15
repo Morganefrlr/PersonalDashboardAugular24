@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { InputTodoComponent } from './form/input-todo/input-todo.component';
 import { InputNoteComponent } from './form/input-note/input-note.component';
 import { BoxButtonsItemComponent } from './box-buttons-item/box-buttons-item.component';
+import { InputBookmarkComponent } from './form/input-bookmark/input-bookmark.component';
 
 
 
@@ -17,6 +18,7 @@ import { BoxButtonsItemComponent } from './box-buttons-item/box-buttons-item.com
     InputTodoComponent,
     InputNoteComponent,
     BoxButtonsItemComponent,
+    InputBookmarkComponent,
   ],
   imports: [
     CommonModule,

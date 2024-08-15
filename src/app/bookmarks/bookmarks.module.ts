@@ -4,6 +4,7 @@ import { BookmarksListComponent } from './bookmarks-list/bookmarks-list.componen
 import { RouterModule, Routes } from '@angular/router';
 import { BookmarkItemComponent } from './bookmark-item/bookmark-item.component';
 import { SharedModuleModule } from "../shared-module/shared-module.module";
+import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
 
 const bookmarksRoutes: Routes = [
   {path:"bookmarks", component: BookmarksListComponent},
@@ -15,7 +16,8 @@ const bookmarksRoutes: Routes = [
 @NgModule({
   declarations: [
     BookmarksListComponent,
-    BookmarkItemComponent
+    BookmarkItemComponent,
+    AddBookmarkComponent
   ],
   imports: [
     CommonModule,
