@@ -13,6 +13,9 @@ export class BookmarksService {
   ]
   constructor() { }
 
+  getBookmarks(){
+    return this.bookmarks
+  }
   addBookmark(){
 
   }

@@ -2,8 +2,10 @@
     <div class="container">
 
         
-        <app-bookmark-item></app-bookmark-item>
-        <app-bookmark-item></app-bookmark-item>
+        <app-bookmark-item 
+            *ngFor="let bookmark of bookmarks"
+            [bookmark]="bookmark"
+        ></app-bookmark-item>
         
 
     </div>

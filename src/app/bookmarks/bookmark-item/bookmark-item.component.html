@@ -1,4 +1,4 @@
-<div class="bookmarkItem">
-    <img src="http://google.com/favicon.ico" alt="">
-    <p>Google</p>
-</div>
+<a class="bookmarkItem" [href]='bookmark.url' target="_blank">
+    <img src={{favicon}} alt="">
+    {{bookmark.title}}
+</a>
