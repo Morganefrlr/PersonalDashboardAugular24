@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookmarkItemComponent } from './bookmark-item/bookmark-item.component';
 import { SharedModuleModule } from "../shared-module/shared-module.module";
 import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
+import { FormsModule } from '@angular/forms';
 
 const bookmarksRoutes: Routes = [
   {path:"bookmarks", component: BookmarksListComponent},
@@ -23,7 +24,7 @@ const bookmarksRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(bookmarksRoutes),
-    SharedModuleModule
+    SharedModuleModule,
 ]
 })
 export class BookmarksModule { }
