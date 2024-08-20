@@ -5,11 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookmarkItemComponent } from './bookmark-item/bookmark-item.component';
 import { SharedModuleModule } from "../shared-module/shared-module.module";
 import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
-import { FormsModule } from '@angular/forms';
+import { EditPanelBookmarksComponent } from './edit-panel-bookmarks/edit-panel-bookmarks.component';
 
 const bookmarksRoutes: Routes = [
   {path:"bookmarks", component: BookmarksListComponent},
   {path:"bookmarks/add", component: AddBookmarkComponent},
+  {path:"bookmarks/edit", component: EditPanelBookmarksComponent},
   
 ]
 
@@ -19,7 +20,8 @@ const bookmarksRoutes: Routes = [
   declarations: [
     BookmarksListComponent,
     BookmarkItemComponent,
-    AddBookmarkComponent
+    AddBookmarkComponent,
+    EditPanelBookmarksComponent
   ],
   imports: [
     CommonModule,

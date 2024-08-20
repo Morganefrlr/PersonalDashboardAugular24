@@ -14,8 +14,5 @@ export class BookmarkItemComponent implements OnInit{
 
   ngOnInit() {
     this.favicon = this.bookmark.url.origin + '/favicon.ico'
-    console.log(this.favicon)
-    console.log(this.bookmark)
-   
   }
 }
