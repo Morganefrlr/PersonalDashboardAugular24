@@ -30,6 +30,8 @@
 
     text-decoration: none;
     text-transform: capitalize;
+
+    position: relative;
     
     &:hover{
         background-color: rgba(#000 ,0.55);
@@ -47,7 +49,30 @@
     }
 
 
+div{
+    position: absolute;
+    top: -8px;
+    right:-8px;
+    background-color:rgba(#fff ,0.9);
+    color: rgba(#000 ,0.7);
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 200ms ease;
 
+    &:hover{
+        background-color:rgba(#000 ,0.8);
+        color: rgba(#fff ,0.8);
+    }
+
+
+}
    
 
 } 
@@ -56,3 +81,29 @@
     justify-content: center;
     gap: 30px;
 }
+
+
+
+
+
+.bookmarksEdit{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(#000 ,0.2);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0px 2px 2px rgba(#000000 ,0.3);
+    color: rgba(#fff, 0.8);
+
+    .bookmarkEditItems{
+        display: flex;
+        gap: 20px;
+        
+    }
+    
+}
+
+

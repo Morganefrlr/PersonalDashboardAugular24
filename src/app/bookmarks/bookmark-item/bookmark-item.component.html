@@ -1,4 +1,11 @@
-<a class="bookmarkItem" [href]='bookmark.url' target="_blank">
+<a *ngIf="!editMode" class="bookmarkItem" [href]='bookmark.url' target="_blank">
     <img src={{favicon}} alt="">
     {{bookmark.title}}
 </a>
+
+
+<div *ngIf="editMode" class="bookmarkItem" [routerLink]="[bookmark.id]" target="_blank">
+    <div (click)='$event.stopPropagation();DeleteBtn()'>x</div>
+    <img src={{favicon}} alt="">
+    {{bookmark.title}}
+</div>

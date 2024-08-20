@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Bookmark } from '../bookmarkModel';
 
 @Component({
@@ -9,10 +9,18 @@ import { Bookmark } from '../bookmarkModel';
 export class BookmarkItemComponent implements OnInit{
 
   @Input() bookmark: Bookmark
+  @Input() editMode : boolean
   favicon : string
 
+  @Output() handleDeleteBookmark: EventEmitter<void> = new EventEmitter()
 
   ngOnInit() {
     this.favicon = this.bookmark.url.origin + '/favicon.ico'
+  }
+
+
+  DeleteBtn(){
+    this.handleDeleteBookmark.emit()
+    
   }
 }

@@ -6,12 +6,13 @@ import { BookmarkItemComponent } from './bookmark-item/bookmark-item.component';
 import { SharedModuleModule } from "../shared-module/shared-module.module";
 import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
 import { EditPanelBookmarksComponent } from './edit-panel-bookmarks/edit-panel-bookmarks.component';
+import { EditBookmarkComponent } from './edit-panel-bookmarks/edit-bookmark/edit-bookmark.component';
 
 const bookmarksRoutes: Routes = [
   {path:"bookmarks", component: BookmarksListComponent},
   {path:"bookmarks/add", component: AddBookmarkComponent},
   {path:"bookmarks/edit", component: EditPanelBookmarksComponent},
-  
+  {path:"bookmarks/edit/:id", component: EditBookmarkComponent},
 ]
 
 
@@ -21,7 +22,8 @@ const bookmarksRoutes: Routes = [
     BookmarksListComponent,
     BookmarkItemComponent,
     AddBookmarkComponent,
-    EditPanelBookmarksComponent
+    EditPanelBookmarksComponent,
+    EditBookmarkComponent
   ],
   imports: [
     CommonModule,

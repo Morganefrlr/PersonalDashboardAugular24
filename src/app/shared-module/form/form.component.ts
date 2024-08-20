@@ -15,7 +15,7 @@ export class FormComponent implements OnInit{
 
   @Input()todo : Todo | any
   @Input()note: Note | any
-  @Input()bookmark:Bookmark  | any
+  @Input()bookmark: Bookmark  | any
   @Input()edit : boolean= false
 
   @Output() handleBtn: EventEmitter<void> = new EventEmitter()
