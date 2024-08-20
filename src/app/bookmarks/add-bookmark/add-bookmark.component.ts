@@ -26,6 +26,7 @@ export class AddBookmarkComponent implements OnInit{
   }
 
   addBookmark(){
+    //this.bookmark.url = new URL(this.bookmark.url)
     this.bookmarkService.addBookmark(this.bookmark)
     this.router.navigate(['/bookmarks'])
   }

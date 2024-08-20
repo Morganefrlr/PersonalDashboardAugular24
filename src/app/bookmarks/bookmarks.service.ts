@@ -9,7 +9,7 @@ export class BookmarksService {
 
   bookmarks : Bookmark[]=[
     new Bookmark('google', 'https://www.google.com/'),
-    new Bookmark('wikipedia', 'https://fr.wikipedia.org/')
+    new Bookmark('wikipedia', 'https://fr.wikipedia.org/'),
   ]
   constructor() { }
 
@@ -19,6 +19,7 @@ export class BookmarksService {
 
 
   addBookmark(bookmark : Bookmark){
+    bookmark.url = new URL(bookmark.url)
     this.bookmarks.push(bookmark)
   }
 
