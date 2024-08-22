@@ -16,7 +16,7 @@ import { Bookmark } from '../../bookmarkModel';
 })
 export class EditBookmarkComponent implements OnInit{
 
-  bookmark : Bookmark | undefined
+  bookmark : Bookmark | any
   edit: boolean = true
 
 
@@ -29,15 +29,16 @@ export class EditBookmarkComponent implements OnInit{
     const params: string | null = this.route.snapshot.paramMap.get("id") 
 
     if(params){
-      console.log(params)
       this.bookmark = this.bookmarkService.getBookmarkById(+params)
-      console.log(this.bookmark)
     }
 
 
   }
 
 
-  updateBookmark(){}
+  updateBookmark(){
+    this.bookmarkService.updateBookmark(this.bookmark)
+    this.router.navigate(['/bookmarks'])
+  }
 
 }

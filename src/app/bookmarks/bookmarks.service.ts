@@ -28,10 +28,9 @@ export class BookmarksService {
   }
 
   updateBookmark(bookmark : Bookmark){
-    const bookmarkToUpdate: Bookmark | any = this.getBookmarkById(bookmark.id)
-    const bookmarkIndex : number = this.bookmarks.findIndex(el => el.id === bookmark.id)
 
-    this.bookmarks[bookmarkIndex] = bookmarkToUpdate
+    const bookmarktoUpdateIndex : number = this.bookmarks.findIndex(el => el.id === bookmark.id)
+    this.bookmarks[bookmarktoUpdateIndex] = bookmark
   }
 
   deleteBookmark(id : number){
