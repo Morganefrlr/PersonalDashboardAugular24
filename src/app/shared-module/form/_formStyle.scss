@@ -49,12 +49,14 @@
     &_buttonContainer{
         display: flex;
         gap: 20px;
+        justify-content: center;
         button{
             @include buttonStyle;
             padding: 6px 12px;
             display: flex;
             font-size: 14px;
-            font-weight: 600;
+            height: 40px;
+            margin: 40px auto;
             &:focus{
                 background-color: rgba(#000 ,0.7);
             }

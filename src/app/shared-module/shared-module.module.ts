@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonAddComponent } from './button-add/button-add.component';
+import { ButtonIconComponent } from './button-icon/button-icon.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +13,7 @@ import { InputBookmarkComponent } from './form/input-bookmark/input-bookmark.com
 
 @NgModule({
   declarations: [
-    ButtonAddComponent,
+    ButtonIconComponent,
     FormComponent,
     InputTodoComponent,
     InputNoteComponent,
@@ -26,7 +26,7 @@ import { InputBookmarkComponent } from './form/input-bookmark/input-bookmark.com
     FormsModule,
   ],
   exports:[
-    ButtonAddComponent,
+    ButtonIconComponent,
     FormComponent,
     BoxButtonsItemComponent,
   ]

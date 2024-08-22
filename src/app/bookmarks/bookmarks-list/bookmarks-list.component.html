@@ -7,7 +7,7 @@
         <p *ngIf="empty">Aucun Bookmark enregistré! Pour commencer appuyez sur le bouton +</p>
     </div>
     <div class="bookmarksBtn">
-        <app-button-add [editBtn]="true" *ngIf="!empty"></app-button-add>
-        <app-button-add></app-button-add>
+        <app-button-icon init='edit' *ngIf="!empty"></app-button-icon>
+        <app-button-icon init='add'></app-button-icon>
     </div>
 </div>

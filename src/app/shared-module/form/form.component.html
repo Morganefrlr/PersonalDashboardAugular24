@@ -9,7 +9,7 @@
         <app-input-bookmark *ngIf="bookmark" [bookmark]="bookmark"></app-input-bookmark>
         
         <div class="formStyle_buttonContainer">
-            <button routerLink="../../" class="cancelButtonForm">Annuler</button>
+            <app-button-icon init="cancel"></app-button-icon>
             <button class="addButtonForm" type="submit" [disabled]="!addForm.form.valid">
                 {{value}}
             </button>
