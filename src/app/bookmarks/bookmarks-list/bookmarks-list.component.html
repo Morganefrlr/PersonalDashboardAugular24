@@ -1,16 +1,13 @@
 <div class="bookmarksMainContainer">
     <div class="container">
-
-        
         <app-bookmark-item 
             *ngFor="let bookmark of bookmarks"
             [bookmark]="bookmark"
         ></app-bookmark-item>
-        
-
+        <p *ngIf="empty">Aucun Bookmark enregistré! Pour commencer appuyez sur le bouton +</p>
     </div>
     <div class="bookmarksBtn">
-        <app-button-add [editBtn]="true"></app-button-add>
+        <app-button-add [editBtn]="true" *ngIf="!empty"></app-button-add>
         <app-button-add></app-button-add>
     </div>
 </div>

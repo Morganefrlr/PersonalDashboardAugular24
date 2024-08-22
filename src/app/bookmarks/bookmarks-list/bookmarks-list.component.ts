@@ -10,10 +10,14 @@ import { Bookmark } from '../bookmarkModel';
 export class BookmarksListComponent implements OnInit{
  
   bookmarks: Bookmark[]
+  empty: boolean = false
 
   constructor(private bookmarkService: BookmarksService){}
   ngOnInit() {
     this.bookmarks = this.bookmarkService.getBookmarks()
+    if(this.bookmarks.length === 0){
+      this.empty = true
+    }
   }
 
 }

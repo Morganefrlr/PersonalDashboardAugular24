@@ -19,7 +19,6 @@ export class BookmarksService {
 
 
   addBookmark(bookmark : Bookmark){
-    bookmark.url = new URL(bookmark.url)
     this.bookmarks.push(bookmark)
   }
 

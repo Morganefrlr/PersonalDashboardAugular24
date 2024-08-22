@@ -1,13 +1,15 @@
-<div class="bookmarksEdit container">
-    <h3>Vos bookmarks</h3>
-    <div class="bookmarkEditItems">
-
+<div class="bookmarksEdit ">
+    <div class="container">
         <app-bookmark-item 
-            *ngFor="let bookmark of bookmarks" 
-            [editMode]="editMode" 
-            [bookmark]="bookmark"
-            (handleDeleteBookmark)="handleDeleteBookmark(bookmark.id)"
-            ></app-bookmark-item> 
+        *ngFor="let bookmark of bookmarks" 
+        [editMode]="editMode" 
+        [bookmark]="bookmark"
+        (handleDeleteBookmark)="handleDeleteBookmark(bookmark.id)"
+        ></app-bookmark-item> 
+        <p *ngIf="empty">Aucun Bookmark enregistré! Pour commencer appuyez sur le bouton +</p>
     </div>
-    
+    <div class="bookmarksBtn">
+        <button routerLink="../" class="cancelButtonForm">Annuler</button>
+    </div>
+        
 </div>

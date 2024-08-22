@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class AddBookmarkComponent implements OnInit{
 
-  bookmark : Bookmark = new Bookmark('','http://example.com')
+  bookmark : Bookmark = new Bookmark('','')
 
   constructor(
     private bookmarkService : BookmarksService,

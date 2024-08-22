@@ -1,10 +1,20 @@
 .bookmarksMainContainer{
     height: 100%;
+    
 
     .container{
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    p{
+        background-color: rgba(#000 ,0.5);
+        backdrop-filter: blur(4px);
+        border-radius: 5px;
+        color: rgba(#fff, 0.8);
+        padding:12px;
     }
 }
 
@@ -38,6 +48,10 @@
         box-shadow: 0px 2px 2px rgba(#000000 ,0.3);
         transform: scale(1.002);
         color: rgba(#fff, 0.9);
+
+        div{
+            @include visibilityButtonsItem  
+        }
     }
 
 
@@ -49,30 +63,33 @@
     }
 
 
-div{
-    position: absolute;
-    top: -8px;
-    right:-8px;
-    background-color:rgba(#fff ,0.9);
-    color: rgba(#000 ,0.7);
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 200ms ease;
+    div{
+        position: absolute;
+        top: -8px;
+        right:-8px;
+        background-color: rgba(100, 100, 108, 0.851);
+        color: rgba(#e4e4e4, 0.9);
+        width: 25px;
+        height: 25px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 200ms ease;
 
-    &:hover{
-        background-color:rgba(#000 ,0.8);
-        color: rgba(#fff ,0.8);
+        &:hover{
+            background-color: rgb(50,50,53);
+        }
+
+
     }
-
-
-}
    
 
 } 
@@ -80,6 +97,27 @@ div{
     display: flex;
     justify-content: center;
     gap: 30px;
+    
+    button{
+        width: 70px;
+        height: 30px;
+        border-radius: 2px;
+        border: none;
+        background-color: rgba(#000 ,0.6);
+        backdrop-filter: blur(4px);
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 200ms ease;
+        box-shadow: 0px 2px 2px rgba(#000000 ,0.3);
+        color: rgba(#fff, 0.8);
+
+        &:hover{
+            background-color: rgba(#000 ,0.7);
+            transform: scale(1.045);
+        }
+
+    }
 }
 
 
@@ -88,16 +126,16 @@ div{
 
 .bookmarksEdit{
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(#000 ,0.2);
-    backdrop-filter: blur(4px);
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    box-shadow: 0px 2px 2px rgba(#000000 ,0.3);
     color: rgba(#fff, 0.8);
 
+    .container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
     .bookmarkEditItems{
         display: flex;
         gap: 20px;

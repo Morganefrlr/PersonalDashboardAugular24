@@ -11,11 +11,13 @@ export class BookmarkItemComponent implements OnInit{
   @Input() bookmark: Bookmark
   @Input() editMode : boolean
   favicon : string
+  url : URL
 
   @Output() handleDeleteBookmark: EventEmitter<void> = new EventEmitter()
 
   ngOnInit() {
-    this.favicon = this.bookmark.url.origin + '/favicon.ico'
+    this.url = new URL(this.bookmark.url)
+    this.favicon = this.url.origin + '/favicon.ico'
   }
 
 
