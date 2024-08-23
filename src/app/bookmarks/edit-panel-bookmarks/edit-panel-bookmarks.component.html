@@ -1,13 +1,12 @@
 <div class="bookmarksEdit ">
     <div class="container">
         <app-bookmark-item 
+        @deleteAnimation
         *ngFor="let bookmark of bookmarks" 
         [editMode]="editMode" 
         [bookmark]="bookmark"
         (handleDeleteBookmark)="handleDeleteBookmark(bookmark.id)"
         ></app-bookmark-item> 
-
-        <app-empty-array *ngIf="empty" data="Bookmark"></app-empty-array>
 
     </div>
     <div class="bookmarksBtn">

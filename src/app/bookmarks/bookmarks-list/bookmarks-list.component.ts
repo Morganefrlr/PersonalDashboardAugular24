@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { BookmarksService } from '../bookmarks.service';
 import { Bookmark } from '../bookmarkModel';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-bookmarks-list',
   templateUrl: './bookmarks-list.component.html',
-  styles: ``
+  
 })
 export class BookmarksListComponent implements OnInit{
  
