@@ -22,6 +22,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 export class NotesListComponent implements OnInit{
 
   notes: Note[] 
+  empty: boolean = false
 
   constructor( 
     private notesService : NotesService,
@@ -31,12 +32,19 @@ export class NotesListComponent implements OnInit{
 
   ngOnInit(){
     this.notes = this.notesService.getNotes()
+    if(this.notes.length === 0){
+      this.empty = true
+    }
+
   }
 
 
   handleDeleteNote(id: number){
     this.notesService.deleteNote(id)
     this.notes = this.notesService.getNotes()
+    if(this.notes.length === 0){
+      this.empty = true
+    }
 
   }
 

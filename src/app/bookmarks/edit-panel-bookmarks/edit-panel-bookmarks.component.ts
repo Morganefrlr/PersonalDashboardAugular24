@@ -14,15 +14,10 @@ export class EditPanelBookmarksComponent implements OnInit{
   empty: boolean = false
 
   constructor(private bookmarksService : BookmarksService){}
-  ngOnInit(){
-    
-   this.bookmarks = this.bookmarksService.getBookmarks()
-   if(this.bookmarks.length === 0){
-    console.log(this.bookmarks.length) 
-    
-    this.empty = true
-  }
 
+
+  ngOnInit(){
+    this.bookmarks = this.bookmarksService.getBookmarks()
   }
 
   handleDeleteBookmark(id : number){

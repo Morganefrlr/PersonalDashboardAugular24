@@ -4,7 +4,7 @@
             *ngFor="let bookmark of bookmarks"
             [bookmark]="bookmark"
         ></app-bookmark-item>
-        <p *ngIf="empty">Aucun Bookmark enregistré! Pour commencer appuyez sur le bouton +</p>
+        <app-empty-array *ngIf="empty" data="Bookmark"></app-empty-array>
     </div>
     <div class="bookmarksBtn">
         <app-button-icon init='edit' *ngIf="!empty"></app-button-icon>

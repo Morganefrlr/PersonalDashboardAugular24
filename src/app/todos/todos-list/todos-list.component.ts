@@ -23,7 +23,9 @@ import { Router } from '@angular/router';
 
 
 export class TodosListComponent implements OnInit{
+
  todos : Todo[]
+ empty : boolean = false
  
  constructor(private todosService : TodosService,
   private router : Router
@@ -31,7 +33,10 @@ export class TodosListComponent implements OnInit{
 
 
   ngOnInit(){
-   this.todos = this.todosService.getTodos() 
+   this.todos = this.todosService.getTodos()
+   if(this.todos.length === 0){
+    this.empty = true
+   } 
  }
  
   toggleCompleted(todo:Todo){
@@ -41,6 +46,9 @@ export class TodosListComponent implements OnInit{
   handleDeleteTodo(id: number){
     this.todosService.deleteTodo(id)
     this.todos = this.todosService.getTodos() 
+    if(this.todos.length === 0){
+      this.empty = true
+     } 
   }
 
   handleEditTodo(id : number){

@@ -8,6 +8,7 @@ import { InputTodoComponent } from './form/input-todo/input-todo.component';
 import { InputNoteComponent } from './form/input-note/input-note.component';
 import { BoxButtonsItemComponent } from './box-buttons-item/box-buttons-item.component';
 import { InputBookmarkComponent } from './form/input-bookmark/input-bookmark.component';
+import { EmptyArrayComponent } from './empty-array/empty-array.component';
 
 
 
@@ -19,6 +20,7 @@ import { InputBookmarkComponent } from './form/input-bookmark/input-bookmark.com
     InputNoteComponent,
     BoxButtonsItemComponent,
     InputBookmarkComponent,
+    EmptyArrayComponent,
   ],
   imports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { InputBookmarkComponent } from './form/input-bookmark/input-bookmark.com
     ButtonIconComponent,
     FormComponent,
     BoxButtonsItemComponent,
+    EmptyArrayComponent,
   ]
 })
 export class SharedModuleModule { }
