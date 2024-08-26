@@ -1,27 +1,4 @@
 
-
-@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons');
-
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-}
-.container{
-    max-width: 60vw;
-    margin: auto;
-    max-height: 40vh;
-    overflow-y: scroll;
-    &::-webkit-scrollbar{
-        display: none;
-    }
-
-}
-
-
-
-
 @mixin visibilityButtonsItem {
     visibility: visible;
     opacity: 1;
@@ -61,19 +38,3 @@
         transform: scale(1.045);
     }
 }
-
-
-
-
-
-
-
-@import "./app/appStyle";
-@import "./app/tabs/tabs";
-@import "./app/todos/todos";
-@import "./app/notes/notes";
-@import "./app/bookmarks/bookmarks";
-@import "./app/shared-module/form/formStyle";
-@import "./app/shared-module/box-buttons-item/boxButtonsItemStyle";
-@import "./app/shared-module/button-icon/buttonIconStyle";
-@import "./app/shared-module/empty-array/emptyArrayStyle";
