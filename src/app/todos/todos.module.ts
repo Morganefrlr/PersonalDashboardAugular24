@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { EditTodoComponent } from './edit-todo/edit-todo.component';
 
 const todosRoutes: Routes = [
-  {path:"todos", component: TodosListComponent},
+  {path:"todos", component: TodosListComponent, data: {tab: 2}},
   {path:"todos/add", component: AddTodoComponent},
  {path:'todos/edit/:id', component: EditTodoComponent} 
 ]

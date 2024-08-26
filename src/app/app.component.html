@@ -6,8 +6,8 @@
     </div>
 
 
-    <div  class="mainContainer_content">
-        <router-outlet></router-outlet>
+    <div  class="mainContainer_content" [@routeAnimation]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
     </div>
 
 

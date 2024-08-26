@@ -10,7 +10,7 @@ import { AddNoteComponent } from './add-note/add-note.component';
 import { EditNoteComponent } from './edit-note/edit-note.component';
 
 const notesRoutes: Routes = [
- {path:"notes", component: NotesListComponent},
+ {path:"notes", component: NotesListComponent, data: {tab: 3}},
  {path:'notes/add',component:  AddNoteComponent },
  {path:'notes/edit/:id',component:  EditNoteComponent },
 ]

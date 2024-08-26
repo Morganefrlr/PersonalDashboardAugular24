@@ -9,7 +9,7 @@ import { EditPanelBookmarksComponent } from './edit-panel-bookmarks/edit-panel-b
 import { EditBookmarkComponent } from './edit-panel-bookmarks/edit-bookmark/edit-bookmark.component';
 
 const bookmarksRoutes: Routes = [
-  {path:"bookmarks", component: BookmarksListComponent},
+  {path:"bookmarks", component: BookmarksListComponent, data: {tab: 1}},
   {path:"bookmarks/add", component: AddBookmarkComponent},
   {path:"bookmarks/edit", component: EditPanelBookmarksComponent},
   {path:"bookmarks/edit/:id", component: EditBookmarkComponent},
