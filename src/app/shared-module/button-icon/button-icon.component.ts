@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
     <div class="btnIcon">
       <a routerLink={{routerLink}}>
         <i class="material-icons-outlined">
-          {{icon}}
+          {{init}}
         </i> 
       </a>
     </div>
@@ -16,20 +16,19 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonIconComponent implements OnInit {
   
   @Input() init : string
+  @Input() edit: boolean = false
   
   routerLink : string 
-  icon : string 
-  
   
   ngOnInit(){
-    this.icon = this.init
-    if(this.init === 'cancel'){
+
+    if(this.init === 'cancel' && this.edit === false){
       this.routerLink = '../'
+    }else if(this.init === 'cancel' && this.edit === true){
+      this.routerLink = '../../'
     }else{
       this.routerLink = this.init
     }
-      
-
-
   }
+
 }
