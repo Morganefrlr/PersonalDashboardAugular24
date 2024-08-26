@@ -6,6 +6,7 @@ import { Tab, tabsConfig } from './tabsConfig';
   templateUrl: './tabs.component.html',
 })
 export class TabsComponent implements OnInit{
+  
   tabList: Tab[]
 
   ngOnInit() {

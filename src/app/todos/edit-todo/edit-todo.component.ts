@@ -9,7 +9,7 @@ import { Todo } from '../todoModel';
 
       <app-form
       [todo]="todo"
-      [edit]="edit"
+      [edit]='true'
       (handleBtn)="editTodo()"
 
       ></app-form>
@@ -19,7 +19,7 @@ import { Todo } from '../todoModel';
 export class EditTodoComponent implements OnInit{
 
   todo : Todo | undefined
-  edit: boolean = true
+
 
   constructor(
     private route : ActivatedRoute,

@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
    ></app-form>
   `
 })
-export class AddNoteComponent implements OnInit{
+export class AddNoteComponent {
   
   
   note: Note = new Note('','')
@@ -22,9 +22,7 @@ export class AddNoteComponent implements OnInit{
     private router : Router
   ){}
 
-  ngOnInit() {
-    
-  }
+
 
   addNote(){
     this.notesService.addNote(this.note)

@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   `,
   styles: ``
 })
-export class AddBookmarkComponent implements OnInit{
+export class AddBookmarkComponent {
 
   bookmark : Bookmark = new Bookmark('','')
 
@@ -21,9 +21,7 @@ export class AddBookmarkComponent implements OnInit{
     private bookmarkService : BookmarksService,
     private router : Router
   ){}
-  ngOnInit(){
-    
-  }
+
 
   addBookmark(){
     this.bookmarkService.addBookmark(this.bookmark)

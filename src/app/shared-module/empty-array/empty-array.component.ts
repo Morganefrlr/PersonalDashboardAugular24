@@ -16,7 +16,7 @@ export class EmptyArrayComponent implements OnInit{
     if(this.data === 'Bookmark'){
       this.text = 'Aucun Bookmark enregistré!'
     }
-    if(this.data === 'Tâche' || this.data === 'Note'){
+    else{
       this.text = `Aucune ${this.data} enregistrée!`
     }
   }

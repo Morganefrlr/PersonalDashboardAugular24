@@ -8,7 +8,7 @@ import { Note } from '../noteModel';
   template: `
    <app-form
    [note]='note'
-   [edit]="edit"
+   [edit]='true' 
    (handleBtn)='editNote()'
    >
    </app-form>
@@ -18,7 +18,6 @@ import { Note } from '../noteModel';
 export class EditNoteComponent implements OnInit{
 
   note : Note | undefined
-  edit: boolean = true
 
 
 

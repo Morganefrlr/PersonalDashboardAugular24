@@ -1,25 +1,22 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Note } from '../noteModel';
-import { NotesService } from '../notes.service';
+
 
 @Component({
   selector: 'app-note-item',
   templateUrl: './note-item.component.html',
-  styles: ``
-})
-export class NoteItemComponent implements OnInit{
 
-  class:string = 'noteButtons'
+})
+
+
+export class NoteItemComponent {
+
   @Input() note: Note
   
   @Output() handleDeleteNote: EventEmitter<void> = new EventEmitter()
   @Output() handleEditNote: EventEmitter<void> = new EventEmitter()
 
-  constructor(){}
 
-  ngOnInit(){
-    
-  }
 
   handleEditBtn(){
     this.handleEditNote.emit()

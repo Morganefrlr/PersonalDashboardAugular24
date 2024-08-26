@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { TodosService } from '../todos.service';
 import { Todo } from '../todoModel';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
     
   `
 })
-export class AddTodoComponent implements OnInit{
+export class AddTodoComponent {
    
   todo : Todo = new Todo('')
   
@@ -26,9 +26,6 @@ export class AddTodoComponent implements OnInit{
     private router : Router
   ){}
 
-  ngOnInit() {
-    
-  }
 
   addTodo(){
     this.todosService.addTodo(this.todo)

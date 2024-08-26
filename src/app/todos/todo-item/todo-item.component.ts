@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from '../todoModel';
 
 
@@ -8,11 +8,8 @@ import { Todo } from '../todoModel';
 })
 
 
-export class TodoItemComponent implements OnInit{
+export class TodoItemComponent {
   
-  class: string= 'todoButtons'
- 
-
 
   @Input() todo: Todo
 
@@ -22,9 +19,6 @@ export class TodoItemComponent implements OnInit{
 
   constructor(){}
 
-  ngOnInit() {
-    
-  }
 
   handleDeleteBtn(){
     this.handleDeleteTodo.emit()

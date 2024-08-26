@@ -17,6 +17,7 @@ const baseStyles = style({
   templateUrl: './app.component.html',
   animations: [
     trigger('routeAnimation', [
+      
       transition(':increment', [
         style({
           position: 'relative',

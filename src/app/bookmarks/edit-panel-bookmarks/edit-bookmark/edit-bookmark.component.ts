@@ -7,17 +7,16 @@ import { Bookmark } from '../../bookmarkModel';
   selector: 'app-edit-bookmark',
   template: `
     <app-form
-      [edit]="edit"
+      [edit]='true'
       [bookmark]='bookmark'
-     (handleBtn)="updateBookmark()"
-      ></app-form>
+      (handleBtn)="updateBookmark()"
+    ></app-form>
   `,
   styles: ``
 })
 export class EditBookmarkComponent implements OnInit{
 
   bookmark : Bookmark | any
-  edit: boolean = true
 
 
   constructor(
@@ -25,9 +24,10 @@ export class EditBookmarkComponent implements OnInit{
     private router : Router,
     private bookmarkService : BookmarksService
   ){}
+
+
   ngOnInit(){
     const params: string | null = this.route.snapshot.paramMap.get("id") 
-
     if(params){
       this.bookmark = this.bookmarkService.getBookmarkById(+params)
     }

@@ -1,11 +1,12 @@
 <div class="bookmarksMainContainer">
     <div class="container">
         <app-bookmark-item 
-            
             *ngFor="let bookmark of bookmarks"
             [bookmark]="bookmark"
         ></app-bookmark-item>
+
         <app-empty-array *ngIf="empty" data="Bookmark"></app-empty-array>
+        
     </div>
     <div class="bookmarksBtn">
         <app-button-icon init='edit' *ngIf="!empty"></app-button-icon>
