@@ -1,7 +1,7 @@
 .formMainContainer{
     display: flex;
     flex-direction: column;
-    background-color: rgba(#000 ,0.5);
+    background-color: $blackTransparent;
     backdrop-filter: blur(4px);
     align-items: center;
     padding: 20px 0;
