@@ -5,7 +5,6 @@ import { map, Observable, timer } from 'rxjs';
 
 
 const baseStyles = style({
-  // display: 'block',
   position: 'absolute',
   top: 0,
   left: 0,
@@ -27,10 +26,6 @@ const baseStyles = style({
         query(':enter, :leave', [
           baseStyles
         ], { optional: true }),
-
-        // query(':enter', [
-        //   style({ opacity: 0 })
-        // ], { optional: true }),
 
         group([
           query(':leave', [
@@ -64,10 +59,6 @@ const baseStyles = style({
           baseStyles
         ], { optional: true }),
 
-        // query(':enter', [
-        //   style({ opacity: 0 })
-        // ], { optional: true }),
-
         group([
           query(':leave', [
             animate('200ms ease-in', style({
@@ -93,7 +84,7 @@ const baseStyles = style({
       transition('* => secondary', [
         style({
           position: 'relative',
-          // overflow: 'hidden'
+
         }),
 
         query(':enter, :leave', [
@@ -124,7 +115,7 @@ const baseStyles = style({
       transition('secondary => *', [
         style({
           position: 'relative',
-          // overflow: 'hidden'
+
         }),
 
         query(':enter, :leave', [
