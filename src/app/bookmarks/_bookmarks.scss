@@ -31,7 +31,7 @@
     &:hover{
         color: $whiteTextDarker;
 
-        div{
+        .bookDeleteBtn{
             @include visibilityOnButtonsItem  
         }
     }
@@ -45,7 +45,7 @@
     }
 
 
-    div{
+    .bookDeleteBtn{
         position: absolute;
         top: -8px;
         right:-8px;
@@ -72,7 +72,7 @@
    
 
 } 
-.bookmarksBtn{
+.bookmarksBtns{
     display: flex;
     justify-content: center;
     gap: 30px;

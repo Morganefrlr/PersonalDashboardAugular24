@@ -5,7 +5,7 @@
 
 
 <div *ngIf="editMode" class="bookmarkItem" [routerLink]="[bookmark.id]" target="_blank">
-    <div (click)='$event.stopPropagation();DeleteBtn()'>x</div>
+    <div class="bookDeleteBtn" (click)='$event.stopPropagation();DeleteBtn()'>x</div>
     <img src={{favicon}} alt="">
     {{bookmark.title}}
 </div>
