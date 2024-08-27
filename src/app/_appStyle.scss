@@ -11,11 +11,11 @@
     
     &_top{
         text-align: center;
-        text-shadow: 0px 1px 4px rgba(#000, 0.5);
+        text-shadow: 0px 1px 4px $blackTransparent;
         padding: 70px 0;
         h1{
             font-size: 120px;
-            color: #f5f5f5;
+            color: $whiteTextDarker;
         }
 
         h2{

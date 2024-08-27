@@ -5,26 +5,23 @@
     right: 3.5px;
     top: 2.5px;
 
-    visibility: hidden;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: all 200ms ease;
+    @include visibilityOffButtonsItem;
 
     &_item{
-        background-color: rgba(100, 100, 108, 0.851);
+        background-color:$buttonGrayLight;
         padding: 6px 12px;
         display: flex;
 
         cursor: pointer;
         i{
             font-size: 16px;
-            color: rgba(#e4e4e4, 0.9);
+            color: $whiteTextMain;
         }
 
     
 
         &:hover{
-            background-color: rgb(50,50,53);
+            background-color: $buttonGrayDark;
         }
     }
 }

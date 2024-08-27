@@ -25,7 +25,7 @@
     }
 
     span{
-        color: rgba(#fff, 0.8);
+        color: $whiteTextMain;
         width: 90%;
     }
     
@@ -35,11 +35,11 @@
         }
 
         span{
-            color: rgba(#fff, 0.9);
+            color: $whiteTextDarker;
         }
 
         .boxButtons{
-            @include visibilityButtonsItem
+            @include visibilityOnButtonsItem
         }
     }
     
@@ -52,7 +52,7 @@
 
 .todoCompleted{
     .boxCheck{
-        background-color: rgb(58, 139, 58);
+        background-color: $greenMain;
         border: none;
 
         i{
@@ -62,7 +62,7 @@
 
     &:hover{
         .boxCheck{
-            background-color: green;
+            background-color: $greenDarker;
     
         }
     }

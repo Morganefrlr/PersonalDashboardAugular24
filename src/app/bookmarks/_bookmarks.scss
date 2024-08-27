@@ -29,10 +29,10 @@
     text-decoration: none;
     text-transform: capitalize;
     &:hover{
-        color: rgba(#fff, 0.9);
+        color: $whiteTextDarker;
 
         div{
-            @include visibilityButtonsItem  
+            @include visibilityOnButtonsItem  
         }
     }
 
@@ -49,8 +49,8 @@
         position: absolute;
         top: -8px;
         right:-8px;
-        background-color: rgba(100, 100, 108, 0.851);
-        color: rgba(#e4e4e4, 0.9);
+        background-color: $buttonGrayLight;
+        color: $whiteTextMain;
         width: 25px;
         height: 25px;
         border-radius: 50px;
@@ -61,13 +61,10 @@
         align-items: center;
         cursor: pointer;
     
-        visibility: hidden;
-        opacity: 0;
-        transform: scale(0.8);
-        transition: all 200ms ease;
+        @include visibilityOffButtonsItem;
 
         &:hover{
-            background-color: rgb(50,50,53);
+            background-color: $buttonGrayDark;
         }
 
 
@@ -89,7 +86,7 @@
 
 .bookmarksEdit{
     height: 100%;
-    color: rgba(#fff, 0.8);
+    color: $whiteTextMain;
 
     .container{
         display: flex;

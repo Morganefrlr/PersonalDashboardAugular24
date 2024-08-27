@@ -1,23 +1,30 @@
 
-@mixin visibilityButtonsItem {
+@mixin visibilityOnButtonsItem {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
-    transition-delay: 400ms;
+    transition-delay: 200ms;
+}
+
+@mixin visibilityOffButtonsItem {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 200ms ease;
 }
 
 @mixin itemStyle {
     display: flex;
     background-color: $blackTransparent;
     backdrop-filter: blur(4px);
-    color: rgba(#fff, 0.8);
+    color:$whiteTextMain;
     margin-bottom: 10px;
     cursor: pointer;
     position: relative;
 
     &:hover{
-        background-color: rgba(#000 ,0.55);
-        box-shadow: 0px 2px 2px $blackShadow;
+        background-color: rgba(#000 ,0.6);
+        box-shadow: $shadowMain;
         transform: scale(1.002); 
     }
 }
@@ -29,12 +36,12 @@
     border: none;
     cursor: pointer;
     transition: all 200ms ease;
-    box-shadow: 0px 2px 2px $blackShadow;
-    color: rgba(#fff, 0.8);
+    box-shadow: $shadowMain;
+    color: $whiteTextMain;
     justify-content: center;
     align-items: center;
     &:hover{
-        background-color: rgba(#000 ,0.7);
+        background-color: rgba(#000 ,0.6);
         transform: scale(1.045);
     }
 }

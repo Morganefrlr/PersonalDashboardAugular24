@@ -1,7 +1,7 @@
 .tabsMain{
     display: flex;
     gap: 14px;
-    background-color: #ffffff3f;
+    background-color: rgba(255, 255, 255, 0.247);
     backdrop-filter: blur(3px);
     border-radius: 12px;
     padding: 10px;
@@ -24,7 +24,7 @@
         height: 2px;
         width: 50%;
         border-radius: 2px;
-        background-color: #ffffffd2;
+        background-color:$whiteTextDarker;
         opacity: 0;
         transform: scale(0);
         transition: all 200ms ease;
