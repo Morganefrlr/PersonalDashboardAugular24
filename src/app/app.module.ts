@@ -14,6 +14,7 @@ import {  TodosModule } from './todos/todos.module';
 import { SharedModuleModule } from './shared-module/shared-module.module';
 import { NotesModule } from './notes/notes.module';
 import { BookmarksModule } from './bookmarks/bookmarks.module';
+import { RecipesModule } from './recipes/recipes.module';
 
 
 
@@ -24,6 +25,7 @@ registerLocaleData(localeFr)
   declarations: [
     AppComponent,
     TabsComponent,
+    
 
 
   ],
@@ -38,6 +40,7 @@ registerLocaleData(localeFr)
     NotesModule,
     BookmarksModule,
     BrowserAnimationsModule,
+    RecipesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
