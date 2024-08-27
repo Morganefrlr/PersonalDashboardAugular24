@@ -23,4 +23,10 @@ export const tabsConfig : Tab[] = [
         classColor:'notesTab',
 
     },
+    {
+        link:"recipes",
+        icon:'local_dining',
+        classColor:'recipesTab',
+
+    },
 ]
