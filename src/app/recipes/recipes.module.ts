@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecipesService } from './recipes.service';
+import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 
 
 
@@ -14,6 +15,7 @@ const recipesRoutes: Routes =[
 @NgModule({
   declarations: [
     RecipesListComponent,
+    RecipeItemComponent,
   ],
   imports: [
     CommonModule,

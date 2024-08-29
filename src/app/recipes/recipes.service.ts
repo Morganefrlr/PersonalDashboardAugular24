@@ -16,12 +16,18 @@ export class RecipesService {
   getRecipes():Observable<any>{
     return this.http.get<any>(this.url)
     .pipe(
-      tap((res) => console.log(res)),
+      tap((res) => this.log(res.meals)),
       catchError((error) => this.handleError(error, []))
     )
   }
 
 
+
+
+
+
+
+  
 
 
   private log(response: any ){

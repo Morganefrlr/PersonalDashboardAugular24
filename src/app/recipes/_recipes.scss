@@ -1,0 +1,36 @@
+.recipeMain{
+    height: 100%;
+    .container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+
+.recipeItem{
+    @include itemStyle;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 200px;
+    gap: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 15px 0;
+
+    img{
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    
+    &:hover{
+        color: $whiteTextDarker;
+    }
+}
