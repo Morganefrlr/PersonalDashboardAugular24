@@ -8,6 +8,8 @@ import { catchError, Observable, of, tap } from 'rxjs';
 export class RecipesService {
 
   url  = "https://www.themealdb.com/api/json/v1/1/search.php?s="
+  urlId = "https://www.themealdb.com/api/json/v1/1/lookup.php?i="
+
  
   constructor(private http : HttpClient) { }
 
@@ -21,7 +23,13 @@ export class RecipesService {
     )
   }
 
-
+  getRecipeById(idMeal : string):Observable<any>{
+    return this.http.get<any>(this.urlId + idMeal)
+    .pipe(
+      tap((res) => this.log(res.meals[0])),
+      catchError((error) => this.handleError(error, undefined))
+    )
+  }
 
 
 
