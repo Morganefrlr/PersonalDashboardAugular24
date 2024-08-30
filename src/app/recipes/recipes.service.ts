@@ -9,6 +9,7 @@ export class RecipesService {
 
   url  = "https://www.themealdb.com/api/json/v1/1/search.php?s="
   urlId = "https://www.themealdb.com/api/json/v1/1/lookup.php?i="
+  urlSearch = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
  
   constructor(private http : HttpClient) { }
@@ -27,6 +28,14 @@ export class RecipesService {
     return this.http.get<any>(this.urlId + idMeal)
     .pipe(
       tap((res) => this.log(res.meals[0])),
+      catchError((error) => this.handleError(error, undefined))
+    )
+  }
+
+  getRecipeBySearch(recipeSearch : string){
+    return this.http.get<any>(this.urlSearch + recipeSearch)
+    .pipe(
+      tap((res) => this.log(res)),
       catchError((error) => this.handleError(error, undefined))
     )
   }

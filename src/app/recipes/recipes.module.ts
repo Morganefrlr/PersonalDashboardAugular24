@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecipesService } from './recipes.service';
 import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 import { RecipePageComponent } from './recipe-page/recipe-page.component';
+import { FormsModule } from '@angular/forms';
+import { RecipesHomepageComponent } from './recipes-homepage/recipes-homepage.component';
 
 
 
 const recipesRoutes: Routes =[
-  {path:'recipes', component: RecipesListComponent, data: {tab: 4}},
+  {path:'recipes', component: RecipesHomepageComponent, data: {tab: 4}},
   {path:'recipes/:id', component: RecipePageComponent}
 ]
 
@@ -19,11 +21,13 @@ const recipesRoutes: Routes =[
     RecipesListComponent,
     RecipeItemComponent,
     RecipePageComponent,
+    RecipesHomepageComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(recipesRoutes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     RecipesService

@@ -1,26 +1,29 @@
 
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { RecipesService } from '../recipes.service';
 
 @Component({
   selector: 'app-recipes-list',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './recipes-list.component.html',
 })
-export class RecipesListComponent implements OnInit{
-
+export class RecipesListComponent implements OnChanges{
 
   
-  recipes : []
+  @Input() recipeSearch: string = ''
+  @Input() recipes : []
 
   constructor(private recipesService : RecipesService){}
 
-  ngOnInit(){
-    this.getRecipeList()
+  ngOnChanges(changes: SimpleChanges){
+    this.getRecipesBySearch()
   }
 
-  getRecipeList(){
-    this.recipesService.getRecipes()
+  getRecipesBySearch(){
+    this.recipesService.getRecipeBySearch(this.recipeSearch)
     .subscribe(res => this.recipes = res.meals)
   }
  
+
+
 }

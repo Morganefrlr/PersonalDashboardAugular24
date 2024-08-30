@@ -1,0 +1,11 @@
+<div class="recipeMain">
+    <input  type="text" 
+            placeholder="Rechercher une recette"
+            id="recipeSearch"
+            [(ngModel)]="recipeSearch" 
+            name="recipeSearch"
+            >
+
+    <app-recipes-list [recipeSearch]="recipeSearch" [recipes]="recipes"></app-recipes-list>
+    
+</div>
