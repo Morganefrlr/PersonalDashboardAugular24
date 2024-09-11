@@ -27,7 +27,7 @@ export class RecipesService {
   getRecipeById(idMeal : string):Observable<any>{
     return this.http.get<any>(this.urlId + idMeal)
     .pipe(
-      tap((res) => this.log(res.meals[0])),
+      tap((res) => console.log(res.meals[0])),
       catchError((error) => this.handleError(error, undefined))
     )
   }

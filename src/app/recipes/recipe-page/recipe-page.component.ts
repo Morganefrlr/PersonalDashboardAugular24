@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RecipesService } from '../recipes.service';
+import { recipeConfig } from './configRecipe';
 
 @Component({
   selector: 'app-recipe-page',
@@ -25,6 +26,9 @@ export class RecipePageComponent implements OnInit{
 
   getRecipe(params : string){
     this.recipeService.getRecipeById(params)
-    .subscribe(res => this.recipe = res.meals[0])
+    .subscribe(res => {
+      const config = recipeConfig(res.meals[0])
+      this.recipe = config[0]
+    })
   }
 }
