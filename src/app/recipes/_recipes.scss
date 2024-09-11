@@ -16,10 +16,14 @@
         width: 20%;
         height: 40px;
         padding: 2px;
-
+        border: none;
+        box-shadow: 2px 2px 2px $blackShadow;
         &:focus{
             outline: none;
-            border: 3px solid #A9C9FF;
+            border: 5px solid;
+            border-image-slice: 1;
+            border-width: 3px;
+            border-image-source: linear-gradient(45deg, #f8ff00 0%, #3ad59f 100%);
             box-shadow: 7px 7px 10px $blackShadow;
         }
     }
@@ -58,5 +62,9 @@
     
     &:hover{
         color: $whiteTextDarker;
+        border: 5px solid;
+        border-image-slice: 1;
+        border-width: 3px;
+        border-image-source: linear-gradient(45deg, #f8ff00 0%, #3ad59f 100%);
     }
 }
