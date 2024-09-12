@@ -1,15 +1,15 @@
-<div *ngIf="recipe" class="mainRecipePage">
-    <div class="container">
+<div *ngIf="recipe" class="recipePageMain">
+
 
         <div class="recipePageLeft">
             <img src={{recipe.img}} alt="">
             <div class="recipePageLeft_bottom">
-                <h4>Ingredients</h4>
+                <h3>Ingredients</h3>
                 <div class="recipeIngredients">
-                    <div class="recipeIngredients_ingredient">
+                    <div class="recipeIngredients_items">
                         <p *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</p>
                     </div>
-                    <div class="recipeIngredients_measure">
+                    <div class="recipeIngredients_items">
                         <p *ngFor="let measure of recipe.measures">{{measure}}</p>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="recipePageRight">
-            <h1>titre de la recette</h1>
+            <h1>{{recipe.title}}</h1>
             <div class="recipePageRight_infos">
                 <div class="containerInfo">
                     <p>{{recipe.cat}}</p>
@@ -39,9 +39,8 @@
                 <p *ngFor="let tag of recipe.tags">{{tag}}</p>
             </div>
 
-            <h4>Instructions</h4>
+            <h3>Instructions</h3>
             <span>"{{recipe.desc}}"</span>
         </div>
-    </div>
 
 </div>
