@@ -1,1 +1,47 @@
-<p>recipe-page works!</p>
+<div *ngIf="recipe" class="mainRecipePage">
+    <div class="container">
+
+        <div class="recipePageLeft">
+            <img src={{recipe.img}} alt="">
+            <div class="recipePageLeft_bottom">
+                <h4>Ingredients</h4>
+                <div class="recipeIngredients">
+                    <div class="recipeIngredients_ingredient">
+                        <p *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</p>
+                    </div>
+                    <div class="recipeIngredients_measure">
+                        <p *ngFor="let measure of recipe.measures">{{measure}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipePageRight">
+            <h1>titre de la recette</h1>
+            <div class="recipePageRight_infos">
+                <div class="containerInfo">
+                    <p>{{recipe.cat}}</p>
+                </div>
+                <div class="containerInfo">
+                    <p>{{recipe.area}}</p>
+                </div>
+                <a class="containerInfo" [href]='recipe.sourceRecipe' target="_blank">
+                    Source 
+                </a>
+                <a class="containerInfo" [href]='recipe.youtube' target="_blank">
+                    <i class="material-icons">
+                        play_arrow
+                    </i>
+                </a>
+            </div>
+
+            <div *ngIf="recipe.tags" class="recipePageRight_tags">
+                <p *ngFor="let tag of recipe.tags">{{tag}}</p>
+            </div>
+
+            <h4>Instructions</h4>
+            <span>"{{recipe.desc}}"</span>
+        </div>
+    </div>
+
+</div>

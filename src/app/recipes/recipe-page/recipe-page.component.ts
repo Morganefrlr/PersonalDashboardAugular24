@@ -11,6 +11,7 @@ import { recipeConfig } from './configRecipe';
 export class RecipePageComponent implements OnInit{
 
   recipe : any
+  tags : any
 
   constructor(
     private route : ActivatedRoute,
@@ -27,8 +28,15 @@ export class RecipePageComponent implements OnInit{
   getRecipe(params : string){
     this.recipeService.getRecipeById(params)
     .subscribe(res => {
-      const config = recipeConfig(res.meals[0])
+
+      if(res.meals[0].strTags){
+        this.tags = res.meals[0].strTags.split(',')
+      } else {
+        this.tags = false
+      }
+      const config = recipeConfig(res.meals[0], this.tags)
       this.recipe = config[0]
+
     })
   }
 }
