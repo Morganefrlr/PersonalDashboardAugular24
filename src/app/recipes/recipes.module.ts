@@ -8,8 +8,9 @@ import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 import { RecipePageComponent } from './recipe-page/recipe-page.component';
 import { FormsModule } from '@angular/forms';
 import { RecipesHomepageComponent } from './recipes-homepage/recipes-homepage.component';
-import { RecipeTagsComponent } from './recipe-tags/recipe-tags.component';
+import { RecipeTagsComponent } from './recipe-page/recipe-tags/recipe-tags.component';
 import { SharedModuleModule } from "../shared-module/shared-module.module";
+import { RecipeIngredientsComponent } from './recipe-page/recipe-ingredients/recipe-ingredients.component';
 
 
 
@@ -25,6 +26,7 @@ const recipesRoutes: Routes =[
     RecipePageComponent,
     RecipesHomepageComponent,
     RecipeTagsComponent,
+    RecipeIngredientsComponent,
   ],
   imports: [
     CommonModule,

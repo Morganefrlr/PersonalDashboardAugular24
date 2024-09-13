@@ -3,22 +3,21 @@
 
         <div class="recipePageLeft">
             <app-button-icon init="arrow_back"></app-button-icon>
+
             <img src={{recipe.img}} alt="">
             <div class="recipePageLeft_bottom">
                 <h3>Ingredients</h3>
                 <div class="recipeIngredients">
-                    <div class="recipeIngredients_items">
-                        <p *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</p>
-                    </div>
-                    <div class="recipeIngredients_items">
-                        <p *ngFor="let measure of recipe.measures">{{measure}}</p>
-                    </div>
+                    
+                    <app-recipe-ingredients [data]="recipe.ingredients"></app-recipe-ingredients>
+                    <app-recipe-ingredients [data]="recipe.measures"></app-recipe-ingredients>
                 </div>
             </div>
         </div>
 
         <div class="recipePageRight">
             <h1>{{recipe.title}}</h1>
+
             <hr>
             <div class="recipePageRight_infos">
                 <div class="containerInfo">
@@ -27,10 +26,10 @@
                 <div class="containerInfo">
                     <p>{{recipe.area}}</p>
                 </div>
-                <a class="containerInfo" [href]='recipe.sourceRecipe' target="_blank">
+                <a *ngIf="recipe.sourceRecipe" class="containerInfo" [href]='recipe.sourceRecipe' target="_blank">
                     Source 
                 </a>
-                <a class="containerInfo" [href]='recipe.youtube' target="_blank">
+                <a *ngIf="recipe.youtube" class="containerInfo" [href]='recipe.youtube' target="_blank">
                     <i class="material-icons">
                         play_arrow
                     </i>

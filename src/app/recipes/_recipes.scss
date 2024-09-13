@@ -125,12 +125,13 @@
         .recipeIngredients{
             display: flex;
             width: 100%;
-            gap: 10px;
+            justify-content: space-evenly;
 
             &_items{
                 flex: 1;
                 text-align: center;
                 gap: 10px;
+
                 p{
                     margin: 10px;
                 }
