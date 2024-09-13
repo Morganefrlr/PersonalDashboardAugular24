@@ -22,9 +22,9 @@ export class ButtonIconComponent implements OnInit {
   
   ngOnInit(){
 
-    if(this.init === 'cancel' && this.edit === false){
+    if(this.init === 'arrow_back' && this.edit === false){
       this.routerLink = '../'
-    }else if(this.init === 'cancel' && this.edit === true){
+    }else if(this.init === 'arrow_back' && this.edit === true){
       this.routerLink = '../../'
     }else{
       this.routerLink = this.init

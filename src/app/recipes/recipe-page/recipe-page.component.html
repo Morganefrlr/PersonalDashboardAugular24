@@ -2,6 +2,7 @@
 
 
         <div class="recipePageLeft">
+            <app-button-icon init="arrow_back"></app-button-icon>
             <img src={{recipe.img}} alt="">
             <div class="recipePageLeft_bottom">
                 <h3>Ingredients</h3>
@@ -41,11 +42,7 @@
             <h3>Instructions</h3>
             <span>"{{recipe.desc}}"</span>
 
-            <hr *ngIf="recipe.tags">
-            <h3 *ngIf="recipe.tags">Tags</h3>
-            <div *ngIf="recipe.tags" class="recipePageRight_tags">
-                <p *ngFor="let tag of recipe.tags">{{tag}}</p>
-            </div>
+            <app-recipe-tags *ngIf="recipe.tags" [tags]='recipe.tags'></app-recipe-tags>
         </div>
 
 </div>

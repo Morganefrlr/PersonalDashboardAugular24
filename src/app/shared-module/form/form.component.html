@@ -9,7 +9,7 @@
         <app-input-bookmark *ngIf="bookmark" [bookmark]="bookmark"></app-input-bookmark>
         
         <div class="formStyle_buttonContainer">
-            <app-button-icon init="cancel" [edit]="edit"></app-button-icon>
+            <app-button-icon init="arrow_back" [edit]="edit"></app-button-icon>
             <button class="addButtonForm" type="submit" [disabled]="!addForm.form.valid">
                 {{value}}
             </button>
