@@ -14,3 +14,22 @@ export const recipeConfig = (data : any, tags: any) =>[
         like: false
 
     }]
+
+
+
+
+
+    export class Recipe{
+        id:string
+        title : string
+        area: string
+        cat: string
+        img: string
+        desc : string
+        sourceRecipe : string
+        youtube: string
+        tags: []
+        ingredients : []
+        measures:[]
+        like: boolean
+    }

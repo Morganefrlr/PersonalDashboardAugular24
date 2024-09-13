@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RecipesService } from '../recipes.service';
-import { recipeConfig } from './configRecipe';
+import { Recipe, recipeConfig } from './configRecipe';
 
 @Component({
   selector: 'app-recipe-page',
@@ -38,5 +38,10 @@ export class RecipePageComponent implements OnInit{
       this.recipe = config[0]
 
     })
+  }
+
+
+  test(){
+    this.recipeService.updateLikeRecipe(this.recipe)
   }
 }

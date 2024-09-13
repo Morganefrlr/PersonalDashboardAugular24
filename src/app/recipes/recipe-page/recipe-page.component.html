@@ -17,7 +17,7 @@
 
         <div class="recipePageRight">
             <h1>{{recipe.title}}</h1>
-                <div class="favoriteIcon">
+                <div class="favoriteIcon" (click)="test()">
                     <i *ngIf="!recipe.like" class="material-icons">
                         favorite_border
                     </i>

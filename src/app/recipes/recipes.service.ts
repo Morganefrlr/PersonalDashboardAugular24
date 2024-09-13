@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, of, tap } from 'rxjs';
+import { catchError, Observable, of, retry, tap } from 'rxjs';
+import { Recipe } from './recipe-page/configRecipe';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ export class RecipesService {
   urlId = "https://www.themealdb.com/api/json/v1/1/lookup.php?i="
   urlSearch = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
- 
+  recipesLike: Recipe[] 
+
   constructor(private http : HttpClient) { }
 
 
@@ -38,6 +40,32 @@ export class RecipesService {
       tap((res) => this.log(res)),
       catchError((error) => this.handleError(error, undefined))
     )
+  }
+
+
+  updateLikeRecipe(recipe : Recipe){
+    this.getRecipeById(recipe.id).subscribe(res => {
+      console.log(this.recipesLike)
+      if(this.recipesLike === undefined){
+        this.recipesLike = [recipe]
+       
+      } else{
+       const searchRecipe = this.recipesLike.find(el => el.id === recipe.id)
+          if(searchRecipe && this.recipesLike.length === 1){
+            this.recipesLike = []
+            console.log(this.recipesLike)
+          }else if(searchRecipe && this.recipesLike.length !== 1){
+            const test = this.recipesLike.find(el => el.id !== recipe.id)
+            console.log(test)
+          }
+          else{
+            this.recipesLike.push(recipe)
+          }
+      }
+
+      
+    })
+
   }
 
 
