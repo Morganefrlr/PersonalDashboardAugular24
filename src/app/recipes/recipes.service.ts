@@ -32,6 +32,8 @@ export class RecipesService {
       tap((res) => console.log(res.meals[0])),
       catchError((error) => this.handleError(error, undefined))
     )
+
+    
   }
 
   getRecipeBySearch(recipeSearch : string){
@@ -44,19 +46,26 @@ export class RecipesService {
 
 
   updateLikeRecipe(recipe : Recipe){
+    recipe.like = !recipe.like
     this.getRecipeById(recipe.id).subscribe(res => {
-       const searchRecipe = this.recipesLike.find(el => el.id === recipe.id)
-           if(searchRecipe){
-            this.recipesLike = this.recipesLike.filter(el => el.id !== recipe.id)
-          }
-          else{
-            this.recipesLike.push(recipe)
-          }
-      }
+      const searchRecipe = this.recipesLike.find(el => el.id === recipe.id)
+        if(searchRecipe){
+          this.recipesLike = this.recipesLike.filter(el => el.id !== recipe.id)
+        }
+        else{
+          this.recipesLike.push(recipe)
+        }
+    })
+  }
 
-      
-    )
 
+  getLikeRecipeById(id : string){
+    const searchRecipe = this.recipesLike.find(el => el.id === id)
+    if(searchRecipe){
+      return true
+    }else{
+      return false
+    }
   }
 
 

@@ -11,13 +11,15 @@ import { Recipe, recipeConfig } from './configRecipe';
 export class RecipePageComponent implements OnInit{
 
   recipe : any
-  tags : any
+  tags : [] | boolean
+
 
   constructor(
     private route : ActivatedRoute,
     private recipeService : RecipesService,
-
   ){}
+
+
   ngOnInit(){
     const params: string | null = this.route.snapshot.paramMap.get("id") 
     if(params){
@@ -34,10 +36,14 @@ export class RecipePageComponent implements OnInit{
       } else {
         this.tags = false
       }
+
+
       const config = recipeConfig(res.meals[0], this.tags)
       this.recipe = config[0]
-
+      this.recipe.like = this.recipeService.getLikeRecipeById(params)
+      
     })
+   
   }
 
 
