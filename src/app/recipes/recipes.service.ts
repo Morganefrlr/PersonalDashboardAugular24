@@ -12,7 +12,7 @@ export class RecipesService {
   urlId = "https://www.themealdb.com/api/json/v1/1/lookup.php?i="
   urlSearch = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
-  recipesLike: Recipe[] 
+  recipesLike: Recipe[] | any[] = []
 
   constructor(private http : HttpClient) { }
 
@@ -45,18 +45,9 @@ export class RecipesService {
 
   updateLikeRecipe(recipe : Recipe){
     this.getRecipeById(recipe.id).subscribe(res => {
-      console.log(this.recipesLike)
-      if(this.recipesLike === undefined){
-        this.recipesLike = [recipe]
-       
-      } else{
        const searchRecipe = this.recipesLike.find(el => el.id === recipe.id)
-          if(searchRecipe && this.recipesLike.length === 1){
-            this.recipesLike = []
-            console.log(this.recipesLike)
-          }else if(searchRecipe && this.recipesLike.length !== 1){
-            const test = this.recipesLike.find(el => el.id !== recipe.id)
-            console.log(test)
+           if(searchRecipe){
+            this.recipesLike = this.recipesLike.filter(el => el.id !== recipe.id)
           }
           else{
             this.recipesLike.push(recipe)
@@ -64,7 +55,7 @@ export class RecipesService {
       }
 
       
-    })
+    )
 
   }
 
