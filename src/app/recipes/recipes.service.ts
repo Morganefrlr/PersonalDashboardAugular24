@@ -69,6 +69,10 @@ export class RecipesService {
   }
 
 
+  getRecipesLiked(){
+    return this.recipesLike
+  }
+
 
 
 
