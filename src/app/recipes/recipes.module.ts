@@ -11,12 +11,15 @@ import { RecipesHomepageComponent } from './recipes-homepage/recipes-homepage.co
 import { RecipeTagsComponent } from './recipe-page/recipe-tags/recipe-tags.component';
 import { SharedModuleModule } from "../shared-module/shared-module.module";
 import { RecipeIngredientsComponent } from './recipe-page/recipe-ingredients/recipe-ingredients.component';
+import { RecipesLikedComponent } from './recipes-liked/recipes-liked.component';
 
 
 
 const recipesRoutes: Routes =[
   {path:'recipes', component: RecipesHomepageComponent, data: {tab: 4}},
-  {path:'recipes/:id', component: RecipePageComponent}
+  {path:'recipes/recipe/:id', component: RecipePageComponent},
+  {path:'recipes/like', component: RecipesLikedComponent},
+
 ]
 
 @NgModule({
@@ -27,6 +30,7 @@ const recipesRoutes: Routes =[
     RecipesHomepageComponent,
     RecipeTagsComponent,
     RecipeIngredientsComponent,
+    RecipesLikedComponent,
   ],
   imports: [
     CommonModule,
