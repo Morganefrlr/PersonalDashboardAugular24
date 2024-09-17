@@ -26,6 +26,8 @@ export class ButtonIconComponent implements OnInit {
       this.routerLink = '../'
     }else if(this.init === 'arrow_back' && this.edit === true){
       this.routerLink = '../../'
+    }else if(this.init === 'favorite'){
+      this.routerLink = 'like'
     }else{
       this.routerLink = this.init
     }

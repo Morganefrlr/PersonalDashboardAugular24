@@ -1,11 +1,13 @@
 <div class="recipeMain">
-    <input  type="text" 
-            placeholder="Rechercher une recette"
-            id="recipeSearch"
-            [(ngModel)]="recipeSearch" 
-            name="recipeSearch"
-            >
-
+    <div class="recipeMainTop">
+        <input  type="text" 
+        placeholder="Rechercher une recette"
+        id="recipeSearch"
+        [(ngModel)]="recipeSearch" 
+        name="recipeSearch"
+        >
+        <app-button-icon init="favorite"></app-button-icon>
+    </div>
     <app-recipes-list [recipeSearch]="recipeSearch" [recipes]="recipes"></app-recipes-list>
     
 </div>
