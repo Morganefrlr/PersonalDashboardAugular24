@@ -22,10 +22,11 @@ export class RecipePageComponent implements OnInit{
 
   ngOnInit(){
     const params: string | null = this.route.snapshot.paramMap.get("id") 
-    if(params){
-      this.getRecipe(params)
-    }
+    if(params)return this.getRecipe(params)
   }
+
+
+
 
   getRecipe(params : string){
     this.recipeService.getRecipeById(params)
@@ -47,7 +48,7 @@ export class RecipePageComponent implements OnInit{
   }
 
 
-  test(){
+  handleLike(){
     this.recipeService.updateLikeRecipe(this.recipe)
   }
 }

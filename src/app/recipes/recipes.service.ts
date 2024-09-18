@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, of, retry, tap } from 'rxjs';
+import { catchError, Observable, of, tap } from 'rxjs';
 import { Recipe } from './recipe-page/configRecipe';
 
 @Injectable({
@@ -12,11 +12,11 @@ export class RecipesService {
   urlId = "https://www.themealdb.com/api/json/v1/1/lookup.php?i="
   urlSearch = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
-  recipesLike: Recipe[] | any[] = []
+  recipesLike: Recipe[] = []
 
   constructor(private http : HttpClient) { }
 
-
+  //////////////////////////// Recipes ////////////////////////////////////
 
   getRecipes():Observable<any>{
     return this.http.get<any>(this.url)
@@ -45,27 +45,29 @@ export class RecipesService {
   }
 
 
+
+
+  //////////////////////////// Like ////////////////////////////////////
+
+
+
   updateLikeRecipe(recipe : Recipe){
     recipe.like = !recipe.like
+
     this.getRecipeById(recipe.id).subscribe(res => {
       const searchRecipe = this.recipesLike.find(el => el.id === recipe.id)
         if(searchRecipe){
           this.recipesLike = this.recipesLike.filter(el => el.id !== recipe.id)
-        }
-        else{
-          this.recipesLike.push(recipe)
-        }
+        }else{this.recipesLike.push(recipe)}
+        
     })
   }
 
 
   getLikeRecipeById(id : string){
     const searchRecipe = this.recipesLike.find(el => el.id === id)
-    if(searchRecipe){
-      return true
-    }else{
-      return false
-    }
+    if(searchRecipe)return true
+    else return false
   }
 
 

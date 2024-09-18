@@ -8,7 +8,6 @@
             <div class="recipePageLeft_bottom">
                 <h3>Ingredients</h3>
                 <div class="recipeIngredients">
-                    
                     <app-recipe-ingredients [data]="recipe.ingredients"></app-recipe-ingredients>
                     <app-recipe-ingredients [data]="recipe.measures"></app-recipe-ingredients>
                 </div>
@@ -17,7 +16,7 @@
 
         <div class="recipePageRight">
             <h1>{{recipe.title}}</h1>
-                <div class="favoriteIcon" (click)="test()">
+                <div class="favoriteIcon" (click)="handleLike()">
                     <i *ngIf="!recipe.like" class="material-icons">
                         favorite_border
                     </i>
@@ -49,6 +48,7 @@
             <span>"{{recipe.desc}}"</span>
 
             <app-recipe-tags *ngIf="recipe.tags" [tags]='recipe.tags'></app-recipe-tags>
+            
         </div>
 
 </div>

@@ -5,7 +5,11 @@ import { RecipesService } from '../recipes.service';
 @Component({
   selector: 'app-recipes-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './recipes-list.component.html',
+  template: `
+    <div class="container">
+      <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-item>
+    </div> 
+`,
 })
 export class RecipesListComponent implements OnChanges{
 
