@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
 import { TabsComponent } from './tabs/tabs.component';
 import { registerLocaleData } from '@angular/common';
@@ -15,6 +12,8 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
 import { NotesModule } from './notes/notes.module';
 import { BookmarksModule } from './bookmarks/bookmarks.module';
 import { RecipesModule } from './recipes/recipes.module';
+import { MapModule } from './map/map.module';
+
 
 
 
@@ -25,9 +24,6 @@ registerLocaleData(localeFr)
   declarations: [
     AppComponent,
     TabsComponent,
-    
-
-
   ],
   imports: [
     BrowserModule,
@@ -41,6 +37,7 @@ registerLocaleData(localeFr)
     BookmarksModule,
     BrowserAnimationsModule,
     RecipesModule,
+    MapModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
