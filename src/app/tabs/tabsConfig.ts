@@ -29,4 +29,9 @@ export const tabsConfig : Tab[] = [
         classColor:'recipesTab',
 
     },
+    {
+        link:'map',
+        icon: 'location_on',
+        classColor:'mapTab',
+    }
 ]
