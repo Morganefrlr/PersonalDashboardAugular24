@@ -10,6 +10,8 @@ import { MarkerMapData } from '../mapData';
     <div class="mapMainContainer">
       <div id="map"></div>
     </div>
+
+    <app-button-icon init="edit"></app-button-icon>
   `
 })
 export class MapMainComponent implements OnInit{
@@ -25,10 +27,11 @@ export class MapMainComponent implements OnInit{
   }
 
 
-
   mapConfig(){
-    this.map = L.map('map').setView([48.866667,2.333333], 4);
 
+
+    ///// config map //////
+    this.map = L.map('map').setView([48.866667,2.333333], 4);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(this.map);
