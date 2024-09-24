@@ -2,17 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import { MapService } from '../map.service';
-import { Markerperso } from '../mapData';
+import { MarkerMapData } from '../mapData';
 
 @Component({
   selector: 'app-map-main',
-  templateUrl: './map-main.component.html',
+  template: `
+    <div class="mapMainContainer">
+      <div id="map"></div>
+    </div>
+  `
 })
 export class MapMainComponent implements OnInit{
 
   map: any
   marker:any
-  markers:Markerperso[]
+  markers:MarkerMapData[]
 
   constructor(private mapService : MapService){}
 

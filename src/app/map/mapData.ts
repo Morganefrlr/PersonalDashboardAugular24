@@ -1,4 +1,4 @@
-export class Markerperso {
+export class MarkerMapData {
     id: number
     city:string
     geocode: [number,number]
