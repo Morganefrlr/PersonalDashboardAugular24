@@ -26,15 +26,19 @@ export class MapService {
     return this.markers.find(el => el.id = id)
   }
 
+  addMarker(markToAdd : MarkerMapData){
+    this.markers.push(markToAdd)
+  }
+
   deleteMarker(id : number){
       this.markers = this.markers.filter(el => el.id !== id)
       console.log(this.markers)
   }
 
 
-  updateMarker(mark : MarkerMapData){
-    const markerIndex = this.markers.findIndex(el => el.id = mark.id)
-    this.markers[markerIndex]= mark 
+  updateMarker(markToUpdate : MarkerMapData){
+    const markerIndex = this.markers.findIndex(el => el.id = markToUpdate.id)
+    this.markers[markerIndex]= markToUpdate 
   }
 
 }

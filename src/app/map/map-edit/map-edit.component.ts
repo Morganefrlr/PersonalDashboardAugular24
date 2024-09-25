@@ -9,7 +9,8 @@ import { MapService } from '../map.service';
     <div class="markerEditPageMain container">
 
       <div class="markerEditPageMain_leftSide">
-        <app-form-map *ngIf="markToForm"  [mark]="markToForm" [init]='initForm' (handleBtnForm)="handleBtnForm()"></app-form-map>
+    
+        <app-form-map (handleBtnForm)="handleBtnForm()" [markerToAdd]="markerToAdd"></app-form-map>
       </div>
 
       <div class="markerEditPageMain_rightSide">
@@ -33,7 +34,7 @@ export class MapEditComponent implements OnInit {
 
   markers: MarkerMapData[]
   mark : MarkerMapData| any
-  markToForm : MarkerMapData| boolean
+  markerToAdd : MarkerMapData = new MarkerMapData("", [0,0])
   initForm : string
 
   constructor(private mapService : MapService){}
@@ -55,16 +56,15 @@ export class MapEditComponent implements OnInit {
 
 
   handleEditBtn(mark: MarkerMapData){
-    this.markToForm = mark
-    this.initForm = 'Editer'
+  
   }
 
 
+
   handleBtnForm(){
-    if(this.initForm = 'Editer'){this.mapService.updateMarker(this.mark)} 
-      
-   //if(this.initForm = 'Ajouter'){this.mapService.updateMarker(this.mark)} 
-   this.markToForm = false
+    this.mapService.addMarker(this.markerToAdd)
+    this.markers = this.mapService.getMarkers()
+
   }
 
 }
