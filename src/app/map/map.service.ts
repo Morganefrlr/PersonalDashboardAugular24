@@ -31,4 +31,10 @@ export class MapService {
       console.log(this.markers)
   }
 
+
+  updateMarker(mark : MarkerMapData){
+    const markerIndex = this.markers.findIndex(el => el.id = mark.id)
+    this.markers[markerIndex]= mark 
+  }
+
 }

@@ -4,6 +4,8 @@ import { MapMainComponent } from './map-main/map-main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModuleModule } from "../shared-module/shared-module.module";
 import { MapEditComponent } from './map-edit/map-edit.component';
+import { FormMapComponent } from './form-map/form-map.component';
+import { FormsModule } from '@angular/forms';
 
 const mapRoutes: Routes = [
   {path:"map", component: MapMainComponent, data: {tab: 5}},
@@ -13,12 +15,14 @@ const mapRoutes: Routes = [
 @NgModule({
   declarations: [
     MapMainComponent,
-    MapEditComponent
+    MapEditComponent,
+    FormMapComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(mapRoutes),
-    SharedModuleModule
+    SharedModuleModule,
+    FormsModule,
 ],
   providers: [
     MapModule,
