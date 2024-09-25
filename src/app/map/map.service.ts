@@ -26,4 +26,9 @@ export class MapService {
     return this.markers.find(el => el.id = id)
   }
 
+  deleteMarker(id : number){
+      this.markers = this.markers.filter(el => el.id !== id)
+      console.log(this.markers)
+  }
+
 }

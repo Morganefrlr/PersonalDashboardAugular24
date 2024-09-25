@@ -19,7 +19,7 @@ import { MapService } from '../map.service';
           <span>Géocode : [{{mark.geocode[0]}} , {{mark.geocode[1]}}]</span>
           
           <app-box-buttons-item (handleEditBtn)="handleEditBtn()"
-          (handleDeleteBtn)="handleDeleteBtn()"  class='noteButtons'>
+          (handleDeleteBtn)="handleDeleteBtn(mark.id)"  class='noteButtons'>
         </app-box-buttons-item>
         </div>
 
@@ -35,6 +35,8 @@ export class MapEditComponent implements OnInit {
   mark : MarkerMapData| any
 
   constructor(private mapService : MapService){}
+
+
   ngOnInit(){
     this.markers = this.mapService.getMarkers()
   }
@@ -42,7 +44,14 @@ export class MapEditComponent implements OnInit {
   getMarker(id : number){
     this.mark = this.mapService.getMarkerById(id)
   }
-  handleDeleteBtn(){}
+
+
+  handleDeleteBtn(id : number){
+    this.mapService.deleteMarker(id)
+    this.markers = this.mapService.getMarkers()
+  }
+
+  
   handleEditBtn(){}
 
 }
