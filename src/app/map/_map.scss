@@ -18,8 +18,7 @@
 
 
     &_leftSide{
-        flex: 0.5;
-        background-color: aqua;
+        flex: 1;
     }
 
 
@@ -38,9 +37,64 @@
     border-radius: 3px;
 
     &:hover{
-        .boxButtons{
+        .buttonTest{
             @include visibilityOnButtonsItem
         }
     }
 
+}
+
+.buttonTest{
+    display: flex;
+    gap: 2px;
+    position: absolute;
+    right: 3.5px;
+    top: 2.5px;
+    background-color:$buttonGrayLight;
+    padding: 6px 12px;
+    display: flex;
+    cursor: pointer;
+    @include visibilityOffButtonsItem;
+    i{
+        font-size: 16px;
+        color: $whiteTextMain;
+    }
+
+    
+
+    &:hover{
+        background-color: $buttonGrayDark;
+    }
+}
+
+
+
+.formMap{
+    display: flex;
+    flex-direction: column;
+    @include itemStyle;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    padding: 30px 0;
+    &:hover{
+        background-color: $blackTransparent;
+        box-shadow: none;
+        transform: scale(1); 
+        cursor: default;
+    }
+    h3{
+        color: $whiteTextMain;
+    }
+    input{
+        height: 30px;
+        width: 70%;
+    }
+    button{
+        @include buttonStyle;
+        display: flex;
+        font-size: 14px;
+        height: 40px;
+        padding: 6px 12px;
+    }
 }

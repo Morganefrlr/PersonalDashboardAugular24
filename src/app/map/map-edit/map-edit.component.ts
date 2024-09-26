@@ -8,20 +8,22 @@ import { MapService } from '../map.service';
   template: `
     <div class="markerEditPageMain container">
 
-      <div class="markerEditPageMain_leftSide">
-    
+      <div class="markerEditPageMain_leftSide">    
         <app-form-map (handleBtnForm)="handleBtnForm()" [markerToAdd]="markerToAdd"></app-form-map>
+        <app-button-icon init="arrow_back"></app-button-icon>
       </div>
 
       <div class="markerEditPageMain_rightSide">
 
-        <div *ngFor="let mark of markers" (click)='getMarker(mark.id)' class="markerStyle">
+        <div *ngFor="let mark of markers" class="markerStyle">
           <h3>{{mark.city}}</h3>
           <span>Géocode : [{{mark.geocode[0]}} , {{mark.geocode[1]}}]</span>
           
-          <app-box-buttons-item (handleEditBtn)="handleEditBtn(mark)"
-          (handleDeleteBtn)="handleDeleteBtn(mark.id)"  class='noteButtons'>
-        </app-box-buttons-item>
+          <div class="buttonTest" (click)="handleDeleteBtn(mark.id)">
+              <i class="material-icons">
+                  delete
+              </i>
+          </div>
         </div>
 
       </div>
@@ -33,9 +35,8 @@ import { MapService } from '../map.service';
 export class MapEditComponent implements OnInit {
 
   markers: MarkerMapData[]
-  mark : MarkerMapData| any
   markerToAdd : MarkerMapData = new MarkerMapData("", [0,0])
-  initForm : string
+
 
   constructor(private mapService : MapService){}
 
@@ -44,9 +45,6 @@ export class MapEditComponent implements OnInit {
     this.markers = this.mapService.getMarkers()
   }
 
-  getMarker(id : number){
-    this.mark = this.mapService.getMarkerById(id)
-  }
 
 
   handleDeleteBtn(id : number){
@@ -54,10 +52,6 @@ export class MapEditComponent implements OnInit {
     this.markers = this.mapService.getMarkers()
   }
 
-
-  handleEditBtn(mark: MarkerMapData){
-  
-  }
 
 
 
