@@ -58,6 +58,7 @@ export class MapEditComponent implements OnInit {
   handleBtnForm(){
     this.mapService.addMarker(this.markerToAdd)
     this.markers = this.mapService.getMarkers()
+    this.markerToAdd = new MarkerMapData("", [0,0])
 
   }
 
