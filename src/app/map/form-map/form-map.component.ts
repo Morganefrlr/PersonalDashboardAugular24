@@ -13,7 +13,6 @@ import { MarkerMapData } from '../mapData';
       <button>Ajouter</button>
     </form>
   `,
-  styles: ``
 })
 export class FormMapComponent {
 
@@ -21,7 +20,7 @@ export class FormMapComponent {
   latitude : number
   longitude : number
   
- @Output() handleBtnForm: EventEmitter<void> = new EventEmitter() 
+  @Output() handleBtnForm: EventEmitter<void> = new EventEmitter() 
 
 
   onSubmit(){

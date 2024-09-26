@@ -13,24 +13,13 @@ import { MapService } from '../map.service';
         <app-button-icon init="arrow_back"></app-button-icon>
       </div>
 
+
       <div class="markerEditPageMain_rightSide">
-
-        <div *ngFor="let mark of markers" class="markerStyle">
-          <h3>{{mark.city}}</h3>
-          <span>Géocode : [{{mark.geocode[0]}} , {{mark.geocode[1]}}]</span>
-          
-          <div class="buttonTest" (click)="handleDeleteBtn(mark.id)">
-              <i class="material-icons">
-                  delete
-              </i>
-          </div>
-        </div>
-
+        <app-map-marker-item [markers]="markers"></app-map-marker-item>
       </div>
 
     </div>
   `,
-  styles: ``
 })
 export class MapEditComponent implements OnInit {
 
@@ -44,14 +33,6 @@ export class MapEditComponent implements OnInit {
   ngOnInit(){
     this.markers = this.mapService.getMarkers()
   }
-
-
-
-  handleDeleteBtn(id : number){
-    this.mapService.deleteMarker(id)
-    this.markers = this.mapService.getMarkers()
-  }
-
 
 
 

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { marker, Marker } from 'leaflet';
 import { MarkerMapData } from './mapData';
 
 @Injectable({
@@ -33,12 +32,6 @@ export class MapService {
   deleteMarker(id : number){
       this.markers = this.markers.filter(el => el.id !== id)
       console.log(this.markers)
-  }
-
-
-  updateMarker(markToUpdate : MarkerMapData){
-    const markerIndex = this.markers.findIndex(el => el.id = markToUpdate.id)
-    this.markers[markerIndex]= markToUpdate 
   }
 
 }

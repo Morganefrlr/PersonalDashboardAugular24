@@ -6,6 +6,7 @@ import { SharedModuleModule } from "../shared-module/shared-module.module";
 import { MapEditComponent } from './map-edit/map-edit.component';
 import { FormMapComponent } from './form-map/form-map.component';
 import { FormsModule } from '@angular/forms';
+import { MapMarkerItemComponent } from './map-marker-item/map-marker-item.component';
 
 const mapRoutes: Routes = [
   {path:"map", component: MapMainComponent, data: {tab: 5}},
@@ -16,7 +17,8 @@ const mapRoutes: Routes = [
   declarations: [
     MapMainComponent,
     MapEditComponent,
-    FormMapComponent
+    FormMapComponent,
+    MapMarkerItemComponent
   ],
   imports: [
     CommonModule,
