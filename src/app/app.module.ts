@@ -18,6 +18,7 @@ import { MapModule } from './map/map.module';
 
 
 
+
 registerLocaleData(localeFr)
 
 @NgModule({
@@ -29,8 +30,6 @@ registerLocaleData(localeFr)
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-   //HttpClientModule,
-    //HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation:false}),
     SharedModuleModule,
     TodosModule,
     NotesModule,

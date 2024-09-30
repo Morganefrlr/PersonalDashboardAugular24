@@ -1,22 +1,29 @@
-<div class="mainContainer">
+<div class="test">
+    
 
-    <div  class="mainContainer_top">
+    
+    
+    <div class="mainContainer">
+        <img src='../assets/img5-min.jpg' alt="" class="testImg">
+       
+        <div  class="mainContainer_top">
             <h1>{{ dateTime | async | date:'HH:mm'  }}</h1>
             <h2>{{dateTime | async | date:'d MMMM y': '':'fr-FR'}}</h2>
+        </div>
+        
+        
+        <div  class="mainContainer_content" [@routeAnimation]="prepareRoute(outlet)">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+        
+        
+        
+        <div  class="mainContainer_bottom">
+            <app-tabs></app-tabs>
+        </div>
+        
+      
     </div>
-
-
-    <div  class="mainContainer_content" [@routeAnimation]="prepareRoute(outlet)">
-        <router-outlet #outlet="outlet"></router-outlet>
-    </div>
-
-
-
-    <div  class="mainContainer_bottom">
-        <app-tabs></app-tabs>
-    </div>
-
-
+    
+    
 </div>
-
-
