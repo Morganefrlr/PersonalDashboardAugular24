@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MarkerMapData } from '../mapData';
 
 
@@ -7,9 +7,9 @@ import { MarkerMapData } from '../mapData';
   template: `
     <form #addMarker='ngForm' (submit)="onSubmit()" class="formMap">
       <h3>Ajouter</h3>
-      <input type="text" placeholder="Ville" required id="city" [(ngModel)]='markerToAdd.city'>
-      <input type="number" placeholder="Latitude" required id="latitude" [(ngModel)]='latitude'>
-      <input type="number" placeholder="Longitude" required  id="longitude" [(ngModel)]='longitude'>
+      <input type="text" placeholder="Ville" required name="city" [(ngModel)]='markerToAdd.city'>
+      <input type="number" placeholder="Latitude" required name="latitude" [(ngModel)]='latitude'>
+      <input type="number" placeholder="Longitude" required  name="longitude" [(ngModel)]='longitude'>
       <button>Ajouter</button>
     </form>
   `,
@@ -25,7 +25,8 @@ export class FormMapComponent {
 
   onSubmit(){
     this.markerToAdd.geocode = [this.latitude, this.longitude]
-    this.handleBtnForm.emit(this.markerToAdd)
+
+ this.handleBtnForm.emit(this.markerToAdd)
   }
 
 }
