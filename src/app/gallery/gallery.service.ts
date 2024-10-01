@@ -19,7 +19,7 @@ export class GalleryService {
   getBackgroundSelected(){
     this.backgroundSelected = localStorage.getItem('Background')
     if(this.backgroundSelected === null) return this.backgroundSelected = galleryImages[0]
-    else return this.backgroundSelected
+    else return JSON.parse(this.backgroundSelected)
     
 
   }

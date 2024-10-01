@@ -1,13 +1,12 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Img } from '../gallery/galleryData';
 import { GalleryService } from '../gallery/gallery.service';
 
 @Component({
   selector: 'app-background-image',
   template: `
-    <img src={{background.url}} alt="" class="testImg">
+    <img src={{background.url}} alt="" class="backgroundImage">
   `,
-  styles: ``
 })
 export class BackgroundImageComponent implements OnInit{
 
@@ -16,7 +15,7 @@ export class BackgroundImageComponent implements OnInit{
   constructor(private galleryService : GalleryService){}
 
   ngOnInit(): void {
-    const getBackground = this.galleryService.getBackgroundSelected()
-    this.background = JSON.parse(getBackground)
+    this.background = this.galleryService.getBackgroundSelected()
+
   }
 }

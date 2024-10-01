@@ -2,8 +2,7 @@ import { animate, group, query, style, transition, trigger } from '@angular/anim
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { map, Observable, timer } from 'rxjs';
-import { GalleryService } from './gallery/gallery.service';
-import { Img } from './gallery/galleryData';
+
 
 
 const baseStyles = style({
