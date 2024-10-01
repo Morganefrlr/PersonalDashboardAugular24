@@ -14,6 +14,8 @@ import { BookmarksModule } from './bookmarks/bookmarks.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { MapModule } from './map/map.module';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryService } from './gallery/gallery.service';
+import { BackgroundImageComponent } from './background-image/background-image.component';
 
 
 
@@ -27,6 +29,7 @@ registerLocaleData(localeFr)
     AppComponent,
     TabsComponent,
     GalleryComponent,
+    BackgroundImageComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ registerLocaleData(localeFr)
     RecipesModule,
     MapModule,
   ],
-  providers: [],
+  providers: [GalleryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,8 @@ import { animate, group, query, style, transition, trigger } from '@angular/anim
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { map, Observable, timer } from 'rxjs';
+import { GalleryService } from './gallery/gallery.service';
+import { Img } from './gallery/galleryData';
 
 
 const baseStyles = style({
@@ -159,11 +161,15 @@ export class AppComponent implements OnInit {
 
   title = 'PersonalDashboardAugular';
   dateTime: Observable<Date>
+  background : Img
+
+  constructor(private galleryService : GalleryService){}
 
   ngOnInit(){
     this.dateTime = timer(0, 1000).pipe(
       map(() =>{ return new Date()})
     )
+    this.background = this.galleryService.getBackgroundSelected()
   }
 
 
