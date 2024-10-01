@@ -161,15 +161,12 @@ export class AppComponent implements OnInit {
 
   title = 'PersonalDashboardAugular';
   dateTime: Observable<Date>
-  background : Img
 
-  constructor(private galleryService : GalleryService){}
 
   ngOnInit(){
     this.dateTime = timer(0, 1000).pipe(
       map(() =>{ return new Date()})
     )
-    this.background = this.galleryService.getBackgroundSelected()
   }
 
 

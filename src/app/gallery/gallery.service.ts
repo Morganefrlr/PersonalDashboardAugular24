@@ -6,16 +6,23 @@ import { galleryImages, Img } from './galleryData';
 })
 export class GalleryService {
 
-  backgroundSelected : Img | any = galleryImages[0]
- 
+  backgroundSelected : Img | any 
 
   constructor() { }
 
   selectBackground(id : number){
     this.backgroundSelected = galleryImages.find(el => el.id === id)
+    localStorage.setItem('Background', JSON.stringify(this.backgroundSelected))
+    window.location.reload()
   }
 
   getBackgroundSelected(){
-    return this.backgroundSelected
+    this.backgroundSelected = localStorage.getItem('Background')
+    if(this.backgroundSelected === null) return this.backgroundSelected = galleryImages[0]
+    else return this.backgroundSelected
+    
+
   }
+
+
 }
