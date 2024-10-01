@@ -13,6 +13,7 @@ import { NotesModule } from './notes/notes.module';
 import { BookmarksModule } from './bookmarks/bookmarks.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { MapModule } from './map/map.module';
+import { GalleryComponent } from './gallery/gallery/gallery.component';
 
 
 
@@ -25,6 +26,7 @@ registerLocaleData(localeFr)
   declarations: [
     AppComponent,
     TabsComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

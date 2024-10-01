@@ -33,5 +33,10 @@ export const tabsConfig : Tab[] = [
         link:'map',
         icon: 'location_on',
         classColor:'mapTab',
+    },
+    {
+        link:'gallery',
+        icon: 'image',
+        classColor:'galleryTab',
     }
 ]
