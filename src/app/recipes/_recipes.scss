@@ -9,8 +9,24 @@
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
-        max-height: 46vh;
+        max-height: 400px;
+        overflow-y: scroll;
+        scrollbar-width: none;       
+        -ms-overflow-style: none; 
     }
+
+
+}
+.containerRecipes{
+    display: flex;
+    width: 60vw;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 350px;
+    overflow-y: scroll;
+    scrollbar-width: none;       
+    -ms-overflow-style: none; 
 
 }
 
@@ -88,9 +104,8 @@
     margin: auto;
     max-height: 50vh;
     overflow-y: scroll;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    scrollbar-width: none;       
+    -ms-overflow-style: none; 
 }
 
 .recipePageLeft{

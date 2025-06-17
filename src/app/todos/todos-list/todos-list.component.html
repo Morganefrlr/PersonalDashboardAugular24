@@ -1,7 +1,8 @@
 <div class="todosMainContainer">
     <div class="container">
+        <div class="containerItem">
 
-        <app-todo-item 
+            <app-todo-item 
             @deleteAnimation
             *ngFor="let todo of todos"  
             [todo]="todo"
@@ -9,7 +10,8 @@
             (handleDeleteTodo)="handleDeleteTodo(todo.id)"
             (handleEditTodo)="handleEditTodo(todo.id)"
             >
-        </app-todo-item>
+            </app-todo-item>
+        </div>
 
         <app-empty-array data="Tâche" *ngIf="empty"></app-empty-array>
        <app-button-icon init='add'></app-button-icon>

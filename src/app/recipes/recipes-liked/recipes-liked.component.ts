@@ -5,11 +5,11 @@ import { Recipe } from '../recipe-page/configRecipe';
 @Component({
   selector: 'app-recipes-liked',
   template: `
+  <div class="container">
     <app-button-icon init="arrow_back"></app-button-icon>
     <p *ngIf="empty" class="emptyText container">Aucune recette enregistrée! 
       Pour enregister une recette appuyez sur le coeur, en haut à droite, 
       sur une fiche recette.</p>
-    <div class="recipeMain container">
       <app-recipes-list  [recipes]="recipes"></app-recipes-list>
     </div>
   `,

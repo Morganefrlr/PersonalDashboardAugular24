@@ -6,8 +6,8 @@ import { RecipesService } from '../recipes.service';
   selector: 'app-recipes-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="container">
-      <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-item>
+    <div class="containerRecipes">
+        <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-item>
     </div> 
 `,
 })

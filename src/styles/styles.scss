@@ -21,11 +21,13 @@
     max-width: 60vw;
     margin: auto;
     max-height: 40vh;
-  //  overflow-y: scroll;
-  //  &::-webkit-scrollbar{
-   //     display: none;
-  //  }
+}
 
+.containerItem{
+    max-height: 350px;
+    overflow-y: scroll;
+    scrollbar-width: none;       
+    -ms-overflow-style: none; 
 }
 
 
