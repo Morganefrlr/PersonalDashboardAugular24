@@ -2,15 +2,18 @@
     height: 100%;
 }
 
+.containerNoteItem{
+    max-height: 350px;
+    overflow-y: scroll;
+    scrollbar-width: none;       
+    -ms-overflow-style: none; 
+}
+
 .noteItem{
     @include itemStyle;
     border-radius: 2px;
     padding: 10px 12px; 
-    max-height: 100px;
-    overflow-y: scroll;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    max-height: fit-content;
 
     
     &:hover{

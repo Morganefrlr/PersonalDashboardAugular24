@@ -1,13 +1,16 @@
 <div class="notesMainContainer">
     <div class="container">
 
-        <app-note-item
-        @deleteAnimation
-        *ngFor="let note of notes"
-        [note]="note"
-        (handleDeleteNote)="handleDeleteNote(note.id)"
-        (handleEditNote)="handleEditNote(note.id)"
-        ></app-note-item>
+        <div class="containerNoteItem">
+
+            <app-note-item
+            @deleteAnimation
+            *ngFor="let note of notes"
+            [note]="note"
+            (handleDeleteNote)="handleDeleteNote(note.id)"
+            (handleEditNote)="handleEditNote(note.id)"
+            ></app-note-item>
+        </div>
 
         <app-empty-array data='Note' *ngIf="empty"></app-empty-array>
         <app-button-icon init='add'></app-button-icon>
