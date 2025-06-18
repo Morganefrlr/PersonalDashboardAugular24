@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import { MapService } from '../map.service';
 import { MarkerMapData } from '../mapData';
