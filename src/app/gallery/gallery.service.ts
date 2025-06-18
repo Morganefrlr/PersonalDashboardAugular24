@@ -13,7 +13,7 @@ export class GalleryService {
   selectBackground(id : number){
     this.backgroundSelected = galleryImages.find(el => el.id === id)
     localStorage.setItem('Background', JSON.stringify(this.backgroundSelected))
-    window.location.reload()
+   // window.location.reload()
   }
 
   getBackgroundSelected(){
