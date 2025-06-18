@@ -1,0 +1,21 @@
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-pane,
+.leaflet-control-attribution,
+.leaflet-control-zoom {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.leaflet-tile {
+  background-image: url('/assets/leaflet/layers.png');
+}
+
+.leaflet-marker-icon {
+  background-image: url('/assets/leaflet/marker-icon.png');
+}
+
+.leaflet-marker-shadow {
+  background-image: url('/assets/leaflet/marker-shadow.png');
+}
