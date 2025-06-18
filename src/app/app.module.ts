@@ -16,7 +16,7 @@ import { MapModule } from './map/map.module';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryService } from './gallery/gallery.service';
 import { BackgroundImageComponent } from './background-image/background-image.component';
-import "leaflet/dist/leaflet.css";
+
 
 
 
