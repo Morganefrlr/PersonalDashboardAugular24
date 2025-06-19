@@ -50,3 +50,19 @@
 }
 
 
+.homepageMain{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 40px;
+    height: fit-content;
+    margin: 0 auto;
+    gap: 15px;
+    align-items: center;
+    color: #fff;
+    @include itemStyle;
+    p{
+        font-size: 18px;
+    }
+}
+

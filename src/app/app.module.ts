@@ -16,6 +16,7 @@ import { MapModule } from './map/map.module';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryService } from './gallery/gallery.service';
 import { BackgroundImageComponent } from './background-image/background-image.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 
@@ -30,6 +31,7 @@ registerLocaleData(localeFr)
     TabsComponent,
     GalleryComponent,
     BackgroundImageComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
